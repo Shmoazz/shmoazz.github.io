@@ -418,3 +418,71 @@
         padding: 12px 15px;
     }
 }
+
+@media (max-width: 768px) {
+  .component-content {
+    padding: 15px;
+  }
+
+  .component-media img {
+    max-height: 300px; /* Reduce image height for better mobile experience */
+  }
+
+  .video-container {
+    padding-bottom: 56.25%; /* Keeps 16:9 ratio */
+  }
+
+  .project-description,
+  .project-technology,
+  .project-results,
+  .project-awards {
+    padding: 20px;
+  }
+
+  .project-header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 0 10px;
+  }
+
+  .project-meta {
+    text-align: center;
+  }
+
+  .back-link {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .component-media-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .component-media img {
+    max-height: 200px;
+  }
+
+  .project-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-description h2,
+  .project-contributions h2,
+  .project-technology h2,
+  .project-results h2,
+  .project-awards h2 {
+    font-size: 1.4rem;
+  }
+
+  .component-item h3 {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+
+  .award-icon {
+    font-size: 2rem;
+  }
+}
