@@ -845,3 +845,11 @@ footer {
         font-size: 2rem;
     }
 }
+
+@media (max-width: 768px) {
+  .experience-header,
+  .projects-header {
+    position: static !important;
+    top: auto !important;
+  }
+}
