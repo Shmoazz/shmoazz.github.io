@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micron‑Precision 3D Printer – Zach Moas Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">Mesa-Based LinuxCNC Setup</div>
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="project-detail">
+    <div class="project-header">
+        <h1>Micron‑Precision 3D Printer</h1>
+        <div class="project-meta">
+            <span class="project-date">2024 – 2025</span>
+            <a href="index.html#projects" class="back-link">Back to Projects</a>
+        </div>
+    </div>
+
+    <div class="project-content">
+        <!-- Photo of electronics box -->
+        <div class="project-media">
+            <div class="component-media">
+                <img src="images/3dp-electronics-box.jpg" alt="Electronics control box for the 3D printer">
+            </div>
+        </div>
+
+        <!-- Project Description -->
+        <div class="project-description">
+            <h2>Project Overview</h2>
+            <p>
+                Senior capstone project to build a research‑grade 3D printer accurate to <strong>±1 µm</strong>. The motion platform uses
+                pre‑loaded ground ball screws, 1 µm linear scales, and high‑torque stepper motors under LinuxCNC control. A pneumatic
+                extruder lays down a silver‑filled polymer, letting us print conductive traces directly onto the part. My team focused on
+                making the XYZ stage rock‑solid so the materials group could experiment with functional circuitry.
+            </p>
+        </div>
+
+        <!-- My Contributions -->
+        <div class="project-contributions">
+            <h2>My Contributions</h2>
+
+            <!-- Section 1: Wiring Diagram -->
+            <div class="component-item">
+                <h3>System‑Level Wiring Diagram</h3>
+                <div class="component-content">
+                    <div class="component-media">
+                        <img src="images/3dp-wiring.jpg" alt="System wiring diagram">
+                    </div>
+                    <div class="component-description">
+                        <p>
+                            Produced the master wiring diagram covering motion control, limit switches, linear scales, and pneumatic
+                            valves. The color‑coded harness map kept assembly quick and made future debugging painless; every reference
+                            is cross‑linked to the LinuxCNC HAL pins.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Electrical Schematic -->
+            <div class="component-item">
+                <h3>Electrical Schematic</h3>
+                <div class="component-content">
+                    <div class="component-media">
+                        <img src="images/3dp-schematic.jpg" alt="Sample electrical schematic">
+                    </div>
+                    <div class="component-description">
+                        <p>
+                            Drafted detailed schematics for the Mesa 7i96/7i85 stack, stepper drivers, scale inputs, and solenoid
+                            control. Added ferrite beads and star‑ground layout to tame electrical noise—critical when you’re
+                            chasing micron‑level repeatability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="project-technology">
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>LinuxCNC on PREEMPT‑RT kernel</li>
+                <li>Mesa 7i96 motion controller + 7i85 encoder board</li>
+                <li>C5 ground ball screws & zero‑backlash nuts</li>
+                <li>Heidenhain 1 µm linear scales</li>
+                <li>DM556T stepper drivers @128× micro‑step</li>
+                <li>Pneumatic extrusion of conductive polymer</li>
+            </ul>
+        </div>
+
+        <!-- Results -->
+        <div class="project-results">
+            <h2>Results</h2>
+            <p>
+                By project close‑out I could generate working LinuxCNC configs from scratch, draft clean schematics, and produce
+                wiring diagrams that others could follow. Test moves confirmed <em>±1 µm</em> repeatability over 100 mm travel
+                and the printer successfully deposited conductive traces, proving the motion system and extrusion timing.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Zach Moas. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

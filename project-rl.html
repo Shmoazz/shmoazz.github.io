@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinforcement Learning Experiment - Zach Moas Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Reinforcement Learning Experiment</div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-detail">
+        <div class="project-header">
+            <h1>Location-Based Intrinsic Reward in RL</h1>
+            <div class="project-meta">
+                <span class="project-date">2021</span>
+                <a href="index.html#projects" class="back-link">Back to Projects</a>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-media">
+                <div class="component-media-flex">
+                    <div class="component-media">
+                        <img src="images/rl-experiment-main.jpg" alt="Hummingbird agent in Unity environment">
+                    </div>
+                    <div class="component-media">
+                        <img src="images/rl-experiment-results.jpg" alt="TensorBoard learning curves comparison">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>
+                    This project explored the effectiveness of intrinsic reward systems in reinforcement learning. 
+                    I experimented with a hummingbird agent in a Unity virtual environment that was trained to collect
+                    nectar from flowers. The standard approach only rewards the agent for accomplishing the primary goal
+                    (an extrinsic reward system), but I hypothesized that providing additional rewards for behaviors that
+                    might lead to the goal could improve training efficiency and performance.
+                </p>
+            </div>
+
+            <div class="project-contributions">
+                <h2>Key Components</h2>
+
+                <div class="component-item">
+                    <h3>Virtual Environment Setup</h3>
+                    <div class="component-content">
+                        <div class="component-media">
+                            <img src="images/rl-unity-environment.jpg" alt="Unity environment with hummingbird and flowers">
+                        </div>
+                        <div class="component-description">
+                            <p>
+                                I implemented a virtual environment in Unity where a hummingbird agent navigated to collect nectar from flowers.
+                                The agent received observational inputs including its position and orientation in 3D space, as well as a
+                                vector between the tip of its beak and the closest flower's nectar hitbox. The baseline model used an
+                                extrinsic reward system, where the agent was only rewarded for successfully collecting nectar by positioning
+                                its beak inside a flower's nectar hitbox.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-item">
+                    <h3>Location-Based Intrinsic Reward System</h3>
+                    <div class="component-content">
+                        <div class="component-media-flex">
+                            <div class="component-media">
+                                <img src="images/rl-triggers.jpg" alt="Triangular prism triggers in a circular arrangement">
+                            </div>
+                            <div class="component-media">
+                                <img src="images/rl-rewards-diagram.jpg" alt="Diagram showing the reward system structure">
+                            </div>
+                        </div>
+                        <div class="component-description">
+                            <p>
+                                I designed a novel location-based intrinsic reward system that supplemented the primary goal with additional rewards
+                                for productive exploration. This involved creating triangular prism-shaped triggers arranged in a circular "pizza slice"
+                                pattern at the same Z-level as the flowers. When the agent entered these trigger zones, it received a small reward, and
+                                the trigger was then disabled for the remainder of that training episode.
+                            </p>
+                            <p>
+                                The key innovation was rewarding the agent for exploring the Z-level where flowers were located, even before
+                                directly interacting with the flowers themselves. This encouraged the agent to stay in productive areas and
+                                explore within those areas, potentially discovering more efficient paths to nectar collection.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-item">
+                    <h3>Training and Evaluation</h3>
+                    <div class="component-content">
+                        <div class="component-media">
+                            <img src="images/rl-tensorboard.jpg" alt="TensorBoard results comparing both approaches">
+                        </div>
+                        <div class="component-description">
+                            <p>
+                                I trained both the standard extrinsic-only reward model and the enhanced intrinsic+extrinsic reward model
+                                using the Unity ML-Agents framework with a Python backend. The training process was managed through an
+                                Anaconda environment, and a custom configuration file specified the neural network architecture and
+                                hyperparameters. TensorBoard was used to visualize and compare performance metrics between the two approaches
+                                over time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-technology">
+                <h2>Technologies Used</h2>
+                <ul>
+                    <li>Unity game engine for environment creation</li>
+                    <li>Unity ML-Agents package for reinforcement learning implementation</li>
+                    <li>Python API for neural network interface</li>
+                    <li>C# for Unity scripts and trigger functionality</li>
+                    <li>Anaconda for Python environment management</li>
+                    <li>TensorBoard for visualizing training metrics</li>
+                </ul>
+            </div>
+
+            <div class="project-results">
+                <h2>Results</h2>
+                <p>
+                    The location-based intrinsic reward system demonstrated faster convergence to optimal behavior compared to the
+                    standard extrinsic-only reward approach. Agents trained with the combined reward system showed more efficient
+                    exploration patterns, spending more time in areas with potential rewards and less time in unproductive regions.
+                    This project highlights the importance of reward shaping in reinforcement learning and demonstrates how
+                    well-designed intrinsic rewards can guide agents toward desirable behaviors even before they achieve the
+                    primary goal.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Zach Moas. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

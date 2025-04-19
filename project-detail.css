@@ -1,0 +1,420 @@
+/* Project Detail Page Styles */
+
+.project-detail {
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.project-header h1 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+/* Improved project meta section */
+.project-meta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4b5563;
+    font-size: 1rem;
+    margin-top: 25px;
+}
+
+.project-date {
+    background-color: #f0f4ff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    border: 1px solid rgba(30, 58, 138, 0.1);
+}
+
+/* Improved back link */
+.back-link {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    background-color: #f0f4ff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid rgba(30, 58, 138, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.back-link:hover {
+    color: #fff;
+    background-color: #1e3a8a;
+    box-shadow: 0 3px 8px rgba(30, 58, 138, 0.3);
+    transform: translateY(-50%) translateX(-3px);
+}
+
+.back-link::before {
+    content: '←';
+    margin-right: 6px;
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover::before {
+    transform: translateX(-3px);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Media section */
+.project-media {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.video-container video,
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
+}
+
+.image-showcase {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.showcase-image:hover {
+    transform: scale(1.02);
+}
+
+/* Project description */
+.project-description,
+.project-technology,
+.project-results,
+.project-awards {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-description h2,
+.project-contributions h2,
+.project-technology h2,
+.project-results h2,
+.project-awards h2 {
+    font-size: 1.8rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.project-description h2:after,
+.project-contributions h2:after,
+.project-technology h2:after,
+.project-results h2:after,
+.project-awards h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #1e3a8a;
+    margin: 10px 0 20px;
+}
+
+.project-description p,
+.project-results p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+.project-technology ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.project-technology li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.project-technology li:before {
+    content: '•';
+    color: #1e3a8a;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.project-technology li:last-child {
+    margin-bottom: 0;
+}
+
+/* Component items */
+.project-contributions {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.component-item {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.component-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.component-item h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #1e3a8a;
+    padding: 15px 20px;
+    margin: 0;
+}
+
+.component-content {
+    padding: 20px;
+}
+
+.component-media {
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.component-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    max-height: 500px; /* Added max height to prevent overly tall images */
+    object-fit: contain; /* Ensures image maintains aspect ratio within bounds */
+}
+
+.component-media img:hover {
+    transform: scale(1.02);
+}
+
+/* For multiple images in a component section */
+.component-media + .component-media {
+    margin-top: -10px;
+}
+
+/* Component media layout for side-by-side images */
+.component-media-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.component-media-flex .component-media {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* Override for multiple images - we don't need negative margin when using flex */
+.component-media-flex .component-media + .component-media {
+    margin-top: 0;
+}
+
+.component-description p {
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Component animations */
+.component-animated {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.component-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Awards section */
+.awards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.award-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    flex: 1 1 calc(50% - 10px);
+    min-width: 250px;
+}
+
+.award-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.award-icon {
+    font-size: 2.5rem;
+    margin-right: 15px;
+}
+
+.award-details h3 {
+    font-size: 1.2rem;
+    color: #1e3a8a;
+    margin-bottom: 5px;
+}
+
+.award-details p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 0.9rem;
+}
+
+/* Project gallery */
+.project-gallery h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.project-gallery h2:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #1e3a8a;
+    margin: 15px auto 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .project-meta {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .back-link {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-detail {
+        padding: 80px 20px 40px;
+    }
+
+    .project-header h1 {
+        font-size: 2rem;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .awards-container {
+        flex-direction: column;
+    }
+
+    .award-item {
+        flex: 1 1 100%;
+    }
+
+    .component-media-flex {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .component-item h3 {
+        font-size: 1.2rem;
+        padding: 12px 15px;
+    }
+}

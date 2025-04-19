@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE SoutheastCon Robot - Zach Moas Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">IEEE SoutheastCon</div>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-detail">
+        <div class="project-header">
+            <h1>IEEE SoutheastCon Robot</h1>
+            <div class="project-meta">
+                <span class="project-date">2023 - 2024</span>
+                <a href="index.html#projects" class="back-link">Back to Projects</a>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-media">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/DHBPQXSa9MA" title="IEEE SoutheastCon Robot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>
+                    I played a cruicial role in the design and fabrication of a
+                    robot for the IEEE SoutheastCon 2024 competition. Our robot achieved the highest scoring run out of
+                    35 participating universities and won First Place in the Hardware Design Competition.
+                </p>
+                <p>
+                    The competition required robots to navigate a complex course and complete multiple tasks with complete autonomy.
+                     The robot needed to manipulate 3 types of objects: small blocks,
+                    big blocks, and small cylinders called thrusters, as well as crossing a 7-inch wide, 2-inch descending gap. There was a
+                    strict 12×12×12 inch volume limit, so designs had to be space-conscious and volumetrically constrained.
+                </p>
+            </div>
+
+            <div class="project-contributions">
+                <h2>My Contributions</h2>
+
+                <div class="component-item">
+                    <h3>Chassis</h3>
+                    <div class="component-content">
+                        <div class="component-media-flex">
+                            <div class="component-media">
+                                <img src="images/ieee-chassis1.jpg" alt="Robot chassis - top view">
+                            </div>
+                            <div class="component-media">
+                                <img src="images/ieee-chassis2.jpg" alt="Robot chassis - side view">
+                            </div>
+                        </div>
+                        <div class="component-description">
+                            <p>
+                                Designed, modeled, and assembled a 10×10 inch chassis compactly housing 4 DC motors and other necessary electronics using mostly VEX metal parts.
+                                The chassis was designed to maximize internal space while maintaining the strict 12×12×12 inch size constraints.
+                                This formed the foundation for all other components and mechanisms, allowing for efficient integration of the
+                                bridge deployment system, thruster pickup, and block manipulators.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-item">
+                    <h3>Bridge</h3>
+                    <div class="component-content">
+                        <div class="component-media">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/O4Pk1WglvuE" title="IEEE Bridge Mechanism" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="component-description">
+                            <p>
+                                Designed, modeled, and assembled a bridge and bridge deployment system to cross a 7-inch wide, 2-inch descending gap.
+                                The bridge and bridge placement device were 3D printed. The placement device featured an embedded gear driven by a
+                                360-degree servo and a pinion. The deployment mechanism used a keyhole-like slot on the bridge, which allowed the
+                                servo horn attached to the bridge placement device to release it when turned.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-item">
+                    <h3>Thrusters Pickup</h3>
+                    <div class="component-content">
+                        <div class="component-media-flex">
+                            <div class="component-media">
+                                <img src="images/ieee-thrusters1.jpg" alt="Thruster pickup mechanism - collapsed state">
+                            </div>
+                            <div class="component-media">
+                                <img src="images/ieee-thrusters2.jpg" alt="Thruster pickup mechanism - deployed state">
+                            </div>
+                        </div>
+                        <div class="component-description">
+                            <p>
+                                Designed, modeled, and assembled a device to pick up small cylindrical game pieces. This was done using a 4-bar linkage
+                                that, when not deployed, was securely housed within the chassis, and then utilized a parallel 4-bar motion to deploy
+                                out of the frame and onto the thrusters. The linkage crank needed to be driven by a 3-to-1 gear ratio to account for
+                                low servo torque, so another embedded 3D printed gear was used.
+                            </p>
+                            <p>
+                                The main thruster holders being driven by the linkage system was essentially a rectangular prism with an array of 3
+                                cylindrical cutouts, flaring out at the bottom to guide intake. Mounted next to each thruster hole was a small servo
+                                with a custom servo horn which would hold the thrusters in place once actuated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-item">
+                    <h3>Small Blocks</h3>
+                    <div class="component-content">
+                        <div class="component-media-flex">
+                            <div class="component-media">
+                                <img src="images/ieee-smallblocks1.jpg" alt="Small blocks mechanism - folded position">
+                            </div>
+                            <div class="component-media">
+                                <img src="images/ieee-smallblocks2.jpg" alt="Small blocks mechanism - deployed position">
+                            </div>
+                        </div>
+                        <div class="component-description">
+                            <p>
+                                I did not design the original small blocks intake; however, I was tasked with helping refine it and ensure that
+                                it fits within the 12×12×12 inch constraints. I added a mechanism that allows it to fold up into the chassis, as
+                                well as remaking and shielding the rubber band holders to improve reliability and durability during competition.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-technology">
+                <h2>Technologies Used</h2>
+                <ul>
+                    <li>VEX metal components for chassis construction</li>
+                    <li>DC motors for drive system</li>
+                    <li>3D printed custom parts for specialized mechanisms</li>
+                    <li>Servo motors for precision control</li>
+                    <li>Fusion 360 for all CAD work</li>
+                    <li>4-bar linkage systems for deployment mechanisms</li>
+                    <li>Custom gearing systems for torque optimization</li>
+                    <li>Embedded microcontroller for autonomous operation</li>
+                </ul>
+            </div>
+
+            <div class="project-awards">
+                <h2>Awards</h2>
+                <div class="awards-container">
+                    <div class="award-item">
+                        <div class="award-icon">🏆</div>
+                        <div class="award-details">
+                            <h3>First Place</h3>
+                            <p>Hardware Design Competition – IEEE SoutheastCon 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Zach Moas. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
