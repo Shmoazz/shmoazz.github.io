@@ -797,6 +797,26 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Modified for mobile: reduce padding and height */
+    section:first-of-type {
+        padding-top: 70px; /* Reduced from 120px */
+    }
+    
+    #hero {
+        height: 85vh; /* Reduced from 100vh */
+        min-height: 500px; /* Ensures minimum height */
+    }
+    
+    /* Increase section animation starting point threshold */
+    .section-animated {
+        transform: translateY(20px); /* Reduced from 30px */
+    }
+    
+    /* Lower the threshold for animations */
+    .section-visible {
+        transform: translateY(0);
+    }
+
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -825,24 +845,40 @@ footer {
     .project-grid {
         grid-template-columns: 1fr; /* Single column on mobile */
     }
+    
+    /* Adjust section padding for mobile */
+    section {
+        padding: 40px 5%; /* Reduced from 60px 5% */
+    }
 }
 
 @media (max-width: 480px) {
     nav {
         flex-direction: column;
-        padding: 15px 5%;
+        padding: 10px 5%; /* Reduced padding */
     }
 
     .logo {
-        margin-bottom: 15px;
+        margin-bottom: 10px; /* Reduced from 15px */
     }
 
     .nav-links li {
-        margin: 0 10px;
+        margin: 0 8px; /* Reduced from 10px */
     }
 
     .hero-content h1 {
         font-size: 2rem;
+    }
+    
+    /* Further reduce hero height on very small screens */
+    #hero {
+        height: 80vh;
+        min-height: 450px;
+    }
+    
+    /* Make sure first section doesn't have too much padding */
+    section:first-of-type {
+        padding-top: 60px;
     }
 }
 
