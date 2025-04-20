@@ -486,3 +486,31 @@
     font-size: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .component-media-flex {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .component-media-flex .component-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: unset !important;
+  }
+
+  .component-media img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px;
+    object-fit: contain;
+  }
+
+  .awards-container {
+    flex-direction: column !important;
+  }
+
+  .award-item {
+    flex: 1 1 100% !important;
+  }
+}
