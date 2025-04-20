@@ -514,3 +514,24 @@
     flex: 1 1 100% !important;
   }
 }
+
+
+@media (max-width: 768px) {
+  .component-media-flex {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .component-media-flex .component-media {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .component-media img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+  }
+}
