@@ -103,17 +103,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Update active state
+        updateActiveNavLink();
+    }
+
+    // NEW FUNCTION: Update active navigation link based on scroll position
+    function updateActiveNavLink() {
+        const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-links a');
+        
+        let currentSectionId = '';
+        const scrollPosition = window.scrollY;
+        const headerHeight = document.querySelector('header').offsetHeight;
+        
+        // Determine which section is currently most visible in the viewport
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - headerHeight - 50; // Offset by header height plus buffer
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+        
+        // Update active class on navigation links
         navLinks.forEach(link => {
             link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href === '#' + currentSectionId) {
+                link.classList.add('active');
+            }
         });
-
-        // Find the corresponding nav link and activate it
-        const correspondingLink = document.querySelector(`.nav-links a[href$="#${targetSection.id}"]`);
-        if (correspondingLink) {
-            correspondingLink.classList.add('active');
-        }
     }
+    
+    // Call updateActiveNavLink on scroll
+    window.addEventListener('scroll', updateActiveNavLink);
+    
+    // Call it once initially to set the correct active link
+    updateActiveNavLink();
 
     // Fix for "View My Work" button
     const ctaButton = document.querySelector('.cta-button');
