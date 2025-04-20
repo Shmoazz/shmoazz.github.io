@@ -27,16 +27,17 @@ header.scrolled {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Updated navigation padding */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 15px 2%; /* Reduced from 5% to 2% */
     max-width: 1400px;
     margin: 0 auto;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 101; /* Higher than section headers */
+    z-index: 101;
 }
 
 /* Ensure content doesn't start behind fixed header */
