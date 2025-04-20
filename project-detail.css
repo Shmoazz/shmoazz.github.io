@@ -414,16 +414,25 @@
   }
 
   .component-media-flex {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .component-media-flex .component-media {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .component-media img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px;
+    object-fit: contain;
   }
 
   .component-content {
     padding: 15px;
-  }
-
-  .component-media img {
-    max-height: 300px;
   }
 
   .video-container {
@@ -435,6 +444,15 @@
   .project-results,
   .project-awards {
     padding: 20px;
+  }
+
+  /* Fix animation visibility bugs on mobile */
+  .component-animated,
+  .section-animated,
+  .component-visible,
+  .section-visible {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
@@ -462,26 +480,5 @@
 
   .component-media img {
     max-height: 200px;
-  }
-}
-
-/* 🛠 NRC-specific fix only */
-@media (max-width: 768px) {
-  .nrc-page .component-media-flex {
-    flex-direction: column !important;
-    gap: 20px !important;
-  }
-
-  .nrc-page .component-media-flex .component-media {
-    flex: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .nrc-page .component-media img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: contain;
   }
 }
