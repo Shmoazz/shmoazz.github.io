@@ -88,58 +88,25 @@ section#awards {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3; /* Increased z-index to be above everything */
     width: 50%;
 }
 
 .hero-image-container {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 55%;
+    left: 0; /* Start from the left edge */
+    width: 100%; /* Cover entire width */
     height: 100%;
     overflow: hidden;
     z-index: 1;
 }
 
-.hero-image-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Using exact background colors from your site */
-    background: linear-gradient(to right, 
-        #f0f4ff 0%,
-        #f0f4ff 20%,
-        rgba(240, 244, 255, 0.98) 30%, 
-        rgba(240, 244, 255, 0.95) 40%, 
-        rgba(240, 244, 255, 0.85) 50%, 
-        rgba(240, 244, 255, 0.7) 60%, 
-        rgba(240, 244, 255, 0.4) 70%, 
-        rgba(240, 244, 255, 0) 80%);
-    z-index: 2;
-    pointer-events: none;
-}
-
-@media (max-width: 768px) {
-    .hero-image-gradient {
-        background: linear-gradient(to right, 
-            #f0f4ff 0%,
-            #f0f4ff 10%,
-            rgba(240, 244, 255, 0.95) 25%, 
-            rgba(240, 244, 255, 0.85) 40%, 
-            rgba(240, 244, 255, 0.7) 55%, 
-            rgba(240, 244, 255, 0.5) 70%, 
-            rgba(240, 244, 255, 0.3) 85%);
-    }
-}
-
 .hero-image {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 100%;
+    left: 40%; /* Position the image to start 40% from the left */
+    width: 60%; /* Cover the right 60% of the container */
     height: 100%;
     z-index: 1;
 }
@@ -149,6 +116,24 @@ section#awards {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.hero-image-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Extended gradient more to the right but with faster fade-out */
+    background: linear-gradient(to right, 
+        #f0f4ff 0%,
+        #f0f4ff 40%, /* Solid background until where image starts */
+        rgba(240, 244, 255, 0.9) 55%, /* Pushed further right */
+        rgba(240, 244, 255, 0.7) 70%, /* Pushed further right */
+        rgba(240, 244, 255, 0.3) 80%, /* More transparency for faster fade */
+        rgba(240, 244, 255, 0) 90%);  /* Complete fade earlier */
+    z-index: 2;
+    pointer-events: none;
 }
 /* ---------- UPDATED HERO SECTION END ---------- */
 
@@ -868,22 +853,23 @@ footer {
         min-height: 500px; /* Ensures minimum height */
     }
     
-    /* Hero responsive adjustments for mobile */
+    /* Hero responsive adjustments for mobile - Keeping original mobile styles */
     .hero-content {
         width: 100%;
-        padding-right: 10%;
         backdrop-filter: blur(3px);
         background-color: rgba(240, 244, 255, 0.7);
         padding: 20px;
         border-radius: 12px;
     }
     
-    .hero-image-container {
-        width: 100%;
+    /* Hide the image on mobile */
+    .hero-image {
+        display: none;
     }
     
+    /* No need for gradient on mobile when image is hidden */
     .hero-image-gradient {
-        background: linear-gradient(to right, rgba(240, 244, 255, 0.9) 0%, rgba(240, 244, 255, 0.7) 50%, rgba(240, 244, 255, 0.5) 100%);
+        display: none;
     }
     
     /* Increase section animation starting point threshold */
