@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zach Moas | Robotics Engineer</title>
-<meta name="description" content="Zach Moas, robotics engineer. Autonomous systems, mechatronics, and CAD, taken from concept through prototype to a machine that runs.">
+<title>Zach Moas | CTO at Daily's</title>
+<meta name="description" content="Zach Moas, CTO at Daily's. Robotics and the software that runs a production kitchen, plus a run of competition robots taken from concept to the floor.">
 <meta name="theme-color" content="#f7f7ef">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1;1,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.className="js"</script>
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -31,11 +31,12 @@
   <div class="shell">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="kicker">Robotics engineer</span>
+        <span class="kicker">CTO at Daily's</span>
         <h1>Zach Moas<span class="sea">.</span></h1>
         <p class="hero-lede">
-          I take robots from a sketch to a machine that runs on competition day:
-          autonomous systems, mechatronics, and a lot of CAD.
+          I build robots that work a real kitchen, and the software that tells them
+          what the day looks like. Before that, a run of competition robots taken
+          from a sketch to the floor.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">See the work <span class="arrow">&rarr;</span></a>
@@ -45,16 +46,27 @@
           <span class="led"></span>
           <span id="clock">--:--:--</span>
           <span class="sep">/</span>
-          <span>Manassas, VA</span>
+          <span>San Francisco, CA</span>
           <span class="sep">/</span>
-          <span>B.S. Robotics &amp; Mechatronics, Virginia Tech</span>
+          <span>Secret clearance</span>
         </div>
       </div>
 
       <figure class="hero-photo">
         <div class="frame">
-          <img src="images/zach.jpg" alt="Zach Moas" width="1400" height="1100">
-          <figcaption class="caption">ZACH MOAS &middot; MANASSAS, VA</figcaption>
+          <div class="shot">
+            <img src="images/zach.jpg" alt="Zach Moas at work in the robotics lab" width="1400" height="1100">
+            <!-- the arrow earns its keep: it is a group shot on a personal site -->
+            <span class="tag" aria-hidden="true">
+              <b>Zach</b>
+              <svg viewBox="0 0 96 44" role="presentation">
+                <path d="M88 6 C 72 18, 56 23, 12 34"/>
+                <path d="M12 34 l 16 3"/>
+                <path d="M12 34 l 12 -10"/>
+              </svg>
+            </span>
+          </div>
+          <figcaption class="caption">ZACH MOAS &middot; SAN FRANCISCO, CA</figcaption>
         </div>
       </figure>
     </div>
@@ -73,44 +85,25 @@
       <span class="rule"></span>
     </div>
 
-    <div class="about-grid">
-      <div class="card about-copy reveal">
-        <p>
-          I am a hands-on robotics engineer with experience in autonomous systems,
-          mechatronics, and CAD, currently finishing a B.S. in Robotics and
-          Mechatronics at Virginia Tech (in-major GPA 3.5).
-        </p>
-        <p>
-          The part I care about is the whole arc: leading a technical team through
-          concept, design, prototyping, and deployment, and being there when the
-          thing either works or does not. That has meant competition robots under
-          hard size limits, a print farm that runs itself, and a printer chasing
-          <strong>one micron</strong> of repeatability.
-        </p>
-        <span class="clearance"><span class="led"></span> Active Secret clearance</span>
-      </div>
-
-      <div class="card skills reveal" data-i="1">
-        <h3>What I reach for</h3>
-        <div class="skill-group">
-          <h4>Software</h4>
-          <ul class="chips">
-            <li>Python</li><li>MATLAB</li><li>C / C++</li><li>Simulink</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h4>CAD &amp; design</h4>
-          <ul class="chips">
-            <li>SolidWorks</li><li>Onshape</li><li>Fusion 360</li><li>FEA</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h4>Tools &amp; platforms</h4>
-          <ul class="chips">
-            <li>PlatformIO</li><li>Arduino</li><li>LinuxCNC</li><li>Git</li>
-          </ul>
-        </div>
-      </div>
+    <div class="card about-copy reveal">
+      <p>
+        I am the CTO of <strong>Daily's</strong>, where I own the robotics and the
+        software around it: a teleoperated arm cell that works a real production
+        kitchen, the motion layer underneath it, and the system that plans the day
+        for the people working beside it.
+      </p>
+      <p>
+        Before that I spent three years taking competition robots from concept to
+        the floor, which is where I learned the part I actually care about. Not the
+        design review, the day it either works or it does not. A print farm that
+        runs itself, an autonomous robot packed inside a twelve inch cube, and a
+        printer chasing <strong>one micron</strong> of repeatability.
+      </p>
+      <ul class="chips about-meta">
+        <li>Secret clearance</li>
+        <li>San Francisco, CA</li>
+        <li>B.S. Robotics &amp; Mechatronics, Virginia Tech, 2025</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -126,31 +119,57 @@
 
     <div class="timeline">
       <article class="xp now reveal">
-        <div class="xp-when">May 2024<br>&rarr; now</div>
+        <div class="xp-when">2026<br>&rarr; now</div>
         <div class="xp-body">
-          <h3>Robotics Engineering Intern</h3>
-          <div class="xp-role">Applied Research Associates, Inc.</div>
+          <h3>Chief Technology Officer</h3>
+          <div class="xp-role">Daily's</div>
           <ul>
-            <li>Researching and prototyping subsystems for a fully autonomous UAV platform.</li>
-            <li>Designing dynamic robotic mechanisms and their actuator assemblies.</li>
-            <li>Integrating sensors, microcontrollers, and RF communication modules.</li>
-            <li>Modeling and simulating system behavior in MATLAB.</li>
-            <li>Designing and fabricating electronics enclosures for field deployment.</li>
+            <li>Own robotics and engineering: a teleoperated bimanual arm cell built to work a real production kitchen rather than a demo table.</li>
+            <li>Built the motion layer under it, turntable, elevator, and arm, behind a real-time control service with the operator UI that drives it.</li>
+            <li>Built the kitchen production system: the day plan, the station queues the line runs off, and an inventory ledger that balances to the gram.</li>
+            <li>Set the engineering direction and the standards the codebase is held to.</li>
           </ul>
         </div>
       </article>
 
-      <article class="xp now reveal">
-        <div class="xp-when">Apr 2024<br>&rarr; now</div>
+      <article class="xp reveal">
+        <div class="xp-when">Jun 2025<br>&rarr; Aug 2025</div>
+        <div class="xp-body">
+          <h3>Engineering Intern</h3>
+          <div class="xp-role">Innova Engineered Plastics, Inc.</div>
+          <ul>
+            <li>Created a CMM inspection SOP with embedded GD&amp;T checks to standardize quality evaluations.</li>
+            <li>Designed and rolled out a manufacturable process for an advanced aerospace component, balancing specification against production reality.</li>
+            <li>Researched and specified polymer materials and manufacturing processes for customer use cases, recommending options on performance, environment, and cost.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="xp reveal">
+        <div class="xp-when">May 2024<br>&rarr; May 2025</div>
+        <div class="xp-body">
+          <h3>Robotics Engineering Intern</h3>
+          <div class="xp-role">Applied Research Associates, Inc.</div>
+          <ul>
+            <li>Prototyped and validated UAV electro-mechanical mechanisms using CAD and rapid fabrication.</li>
+            <li>Integrated sensors, microcontrollers, and RF transmission modules into cohesive subsystems.</li>
+            <li>Modeled system behavior in MATLAB and applied FEA to guide design choices.</li>
+            <li>Designed and fabricated electronics enclosures for UAV deployment.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="xp reveal">
+        <div class="xp-when">Apr 2024<br>&rarr; May 2025</div>
         <div class="xp-body">
           <h3>Chief Engineer</h3>
           <div class="xp-role">Competitive Robotics Organization at Virginia Tech</div>
           <ul>
-            <li>Led the team to first place in the National Robotics Challenge, Manufacturing Workcell category.</li>
-            <li>Designed a 1.5 x 1 m vertical Cartesian gantry to move prints through the assembly.</li>
+            <li>Led the team to first place and the Honda Innovation Award in the National Robotics Challenge, Manufacturing Workcell category.</li>
+            <li>Designed and iterated a 1.5 x 1 m vertical Cartesian gantry for automated print handling.</li>
             <li>Engineered a pick-and-place mechanism for print plate manipulation.</li>
-            <li>Built modular shelving for printer housing and print storage, with sensor feedback in every rung.</li>
-            <li>Wrote the engineering design plan and ran task delegation for a 15 person team.</li>
+            <li>Developed shelving and storage with integrated sensors for plate indexing, which is what made the workflow autonomous.</li>
+            <li>Created and managed the engineering design plan and delegated tasks across a 15 person team.</li>
           </ul>
         </div>
       </article>
@@ -161,10 +180,10 @@
           <h3>Mechanical Engineering Intern</h3>
           <div class="xp-role">Applied Research Associates, Inc.</div>
           <ul>
-            <li>Contributed to full lifecycle prototyping for defense related projects.</li>
-            <li>Modeled and fabricated components for hydraulic and electric actuation systems.</li>
-            <li>Designed assemblies around specific manufacturing processes and sourcing limits.</li>
-            <li>Used FEA to confirm designs held up under their load conditions.</li>
+            <li>Supported full lifecycle prototyping for defense applications.</li>
+            <li>Modeled and fabricated components for hydraulic and electrically actuated systems.</li>
+            <li>Used FEA to verify designs under expected load conditions.</li>
+            <li>Designed assemblies to satisfy manufacturing and sourcing constraints.</li>
           </ul>
         </div>
       </article>
@@ -175,9 +194,9 @@
           <h3>Mechanical Lead</h3>
           <div class="xp-role">Competitive Robotics Organization at Virginia Tech</div>
           <ul>
-            <li>Led mechanical design, prototyping, and fabrication for the IEEE SoutheastCon 2023 and 2024 autonomous robots.</li>
-            <li>Spearheaded the robot that posted the highest scoring run of 35 universities at SoutheastCon 2024.</li>
-            <li>Developed the chassis, linkages, deployable bridge, and object manipulators under strict volume constraints.</li>
+            <li>Designed, built, and tested object handling and locomotion mechanisms.</li>
+            <li>Integrated mechanical subsystems and led the test setups that validated them.</li>
+            <li>Contributed to the highest scoring run out of 35 schools at IEEE SoutheastCon.</li>
           </ul>
         </div>
       </article>
@@ -293,6 +312,7 @@
 </section>
 
 <!-- ========================= contact ========================= -->
+<!-- No email and no phone by request. GitHub is the way in. -->
 <section id="contact">
   <div class="shell">
     <div class="card contact-card reveal">
@@ -301,13 +321,12 @@
         <h2>Say hello</h2>
         <p>
           If you are building something that has to move, I would like to hear about it.
-          Email is the fastest way to reach me.
+          I am easiest to find on GitHub.
         </p>
       </div>
       <div class="contact-lines">
-        <a href="mailto:zach21@vt.edu">zach21@vt.edu</a>
-        <a href="tel:+15713590569" class="mono">(571) 359-0569</a>
-        <span class="mono">Manassas, VA</span>
+        <a href="https://github.com/Shmoazz" rel="me">github.com/Shmoazz</a>
+        <span class="mono">San Francisco, CA</span>
       </div>
     </div>
   </div>
@@ -317,12 +336,12 @@
 
 <footer>
   <div class="shell foot-row">
-    <span>&copy; 2025 Zach Moas</span>
+    <span>&copy; 2026 Zach Moas</span>
     <span>Built by hand. Fish included.</span>
   </div>
 </footer>
 
-<script src="site.js?v=2"></script>
-<script src="aquarium.js?v=2"></script>
+<script src="site.js?v=3"></script>
+<script src="aquarium.js?v=3"></script>
 </body>
 </html>

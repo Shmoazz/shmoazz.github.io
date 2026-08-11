@@ -200,7 +200,30 @@ section{padding:84px 0}
   transition:transform 420ms var(--ease);
 }
 .hero-photo:hover .frame{transform:rotate(0deg)}
+.hero-photo .shot{position:relative;line-height:0}
 .hero-photo img{border-radius:9px;aspect-ratio:5/4;object-fit:cover;object-position:center 42%}
+
+/* It is a group shot on a personal site, so the arrow is not decoration, it
+   answers the only question the picture raises. White with a shadow because
+   it has to survive both the bright ceiling and the dark cabinets. */
+.hero-photo .tag{
+  position:absolute;top:21%;right:2%;
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+  pointer-events:none;line-height:1;
+}
+.hero-photo .tag b{
+  font-family:var(--serif);font-style:italic;font-weight:600;
+  font-variation-settings:"SOFT" 100,"WONK" 1;
+  font-size:clamp(17px,4.4vw,25px);letter-spacing:-.01em;color:#fff;
+  text-shadow:0 1px 7px rgba(0,0,0,.6),0 0 2px rgba(0,0,0,.45);
+}
+.hero-photo .tag svg{
+  width:clamp(64px,16vw,104px);height:auto;margin-right:2px;
+  filter:drop-shadow(0 1px 4px rgba(0,0,0,.5));
+}
+.hero-photo .tag path{
+  fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;
+}
 .hero-photo .caption{
   font-family:var(--mono);font-size:.7rem;color:var(--ink-42);
   padding:11px 2px 13px;text-align:center;
@@ -244,26 +267,18 @@ section{padding:84px 0}
 .tank.strip{height:118px}
 
 /* ---- about ------------------------------------------------------------- */
-.about-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:start}
-.about-copy{padding:34px 36px}
+/* One card, full width, prose held to a readable measure inside it. The
+   skills grid that used to sit beside this is gone: a wall of chips naming
+   every tool you have opened says nothing the projects do not say better. */
+.about-copy{padding:36px 40px 34px}
 .about-copy p+p{margin-top:16px}
-.about-copy p{color:var(--ink-80);font-size:1.06rem}
+.about-copy p{color:var(--ink-80);font-size:1.09rem;max-width:74ch}
 .about-copy strong{font-weight:600;color:var(--ink)}
 
-.clearance{
-  display:inline-flex;align-items:center;gap:8px;margin-top:22px;
-  padding:8px 15px;border-radius:72px;
-  background:var(--sea-wash);color:var(--sea-deep);
-  font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;
-}
+/* the facts that are facts, kept small on purpose */
+.about-meta{margin-top:26px;padding-top:22px;border-top:1px solid var(--hairline)}
+.about-meta li{font-family:var(--mono);font-size:.76rem;letter-spacing:.01em}
 
-.skills{padding:28px 30px}
-.skills h3{font-size:1.15rem;margin-bottom:4px}
-.skill-group+.skill-group{margin-top:20px;padding-top:20px;border-top:1px solid var(--hairline)}
-.skill-group h4{
-  font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--ink-42);margin-bottom:11px;
-}
 .chips{display:flex;flex-wrap:wrap;gap:7px;list-style:none}
 .chips li{
   padding:5px 13px;border-radius:72px;border:1px solid var(--line);
@@ -447,7 +462,6 @@ footer{padding:26px 0 40px}
 @media (max-width:1000px){
   .hero-grid{grid-template-columns:1fr;gap:38px}
   .hero-photo{max-width:330px;justify-self:start}
-  .about-grid{grid-template-columns:1fr}
   .project-grid{grid-template-columns:repeat(2,1fr)}
   .awards{grid-template-columns:1fr}
   .contact-card{grid-template-columns:1fr;gap:24px}

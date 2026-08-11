@@ -6,7 +6,7 @@
      1. the header grows a hairline once you leave the top
      2. the nav marks the section you are actually in
      3. sections fade up once, the first time they are seen
-     4. the clock in the status strip ticks in Manassas time, not yours
+     4. the clock in the status strip ticks in San Francisco time, not yours
    ========================================================================= */
 (function(){
   "use strict";
@@ -63,7 +63,7 @@
   var clock = document.getElementById("clock");
   if(clock){
     var fmt = new Intl.DateTimeFormat("en-US", {
-      timeZone: "America/New_York",
+      timeZone: "America/Los_Angeles",
       hour: "numeric", minute: "2-digit", second: "2-digit", hour12: true
     });
     var beat = function(){ clock.textContent = fmt.format(new Date()); };
