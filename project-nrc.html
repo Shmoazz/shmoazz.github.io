@@ -1,188 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>National Robotics Challenge - Zach Moas Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="project-detail.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National Robotics Challenge | Zach Moas</title>
+<meta name="description" content="An autonomous 3D printing workcell: two Voron printers, a Cartesian gantry, and a plate swapping system that runs the farm without a person in the room.">
+<meta name="theme-color" content="#f7f7ef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.className="js"</script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">National Robotics Challenge</div>
-      <ul class="nav-links">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#experience">Experience</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="project-detail">
-    <div class="project-header">
-      <h1>National Robotics Challenge</h1>
-      <div class="project-meta">
-        <span class="project-date">2024 - 2025</span>
-        <a href="index.html#projects" class="back-link">Back to Projects</a>
+<header>
+  <nav>
+    <a href="index.html" class="logo">Zach Moas<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="proj-hero">
+  <div class="shell">
+    <a href="index.html#projects" class="back-link"><span class="arrow">&larr;</span> All projects</a>
+    <h1>National Robotics Challenge</h1>
+    <div class="proj-meta">
+      <span class="meta-chip">2024 &ndash; 2025</span>
+      <span class="meta-chip">Chief Engineer, 15 person team</span>
+      <span class="meta-chip win">Gold Award</span>
+      <span class="meta-chip win">Honda Innovation Award</span>
+    </div>
+  </div>
+</section>
+
+<section class="proj-body">
+  <div class="shell">
+
+    <div class="proj-block reveal">
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/xBSanU-2V5U" title="Manufacturing Workcell"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
 
-    <div class="project-content">
-      <div class="project-media">
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/xBSanU-2V5U" title="Manufacturing Workcell" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="project-description">
-        <h2>Project Overview</h2>
+    <div class="proj-block reveal">
+      <h2>Overview</h2>
+      <div class="prose">
         <p>
-          Lead a team in the Manufacturing Workcell category at the National Robotics Challenge. Our solution was a fully autonomous 3D print farm that handled the complete printing process without human intervention. Utilizing two open‑source Voron printers and a novel plate‑swapping system, the project won both the Gold Award and the Honda Innovation Award in our category at the National Robotics Challenge 2025.
+          I led a team in the Manufacturing Workcell category at the National Robotics
+          Challenge. Our answer was a fully autonomous 3D print farm that handled the
+          whole printing process with nobody in the room: two open source Voron printers,
+          a Cartesian gantry, and a plate swapping system that moved finished prints onto
+          a shelf and started the next job.
+        </p>
+        <p>
+          It took the Gold Award and the Honda Innovation Award in our category at the
+          National Robotics Challenge 2025.
         </p>
       </div>
+    </div>
 
-      <div class="project-contributions">
-        <h2>My Contributions</h2>
+    <div class="proj-block reveal">
+      <h2>My contributions</h2>
 
-        <!-- Digital Twin -->
-        <div class="component-item">
-          <h3>Creation and Management of Digital Twin</h3>
-          <div class="component-content">
-            <div class="component-media-flex">
-              <div class="component-media">
-                <img src="images/nrc-digital-twin1.jpg" alt="Onshape digital twin of full workcell" />
-              </div>
-              <div class="component-media">
-                <img src="images/nrc-digital-twin2.jpg" alt="Configurable extrusion and hardware library in Onshape" />
-              </div>
-            </div>
-            <div class="component-description">
-              <p>
-                Created and maintained a live Onshape model for every subsystem built, ensuring that mechanical, electrical, and software groups all referenced the same source of truth. I created configurable aluminum‑extrusions and hardware libraries that minimized unique part counts and sped up BOM generation. Sub‑assemblies were used wherever practical to keep the main workspace organized and improve load times.
-              </p>
-            </div>
-          </div>
+      <article class="card part">
+        <h3><span class="n">01</span> Creation and management of the digital twin</h3>
+        <div class="media-pair">
+          <div class="media"><img src="images/nrc-digital-twin1.jpg" alt="Onshape digital twin of the full workcell" loading="lazy"></div>
+          <div class="media"><img src="images/nrc-digital-twin2.jpg" alt="Configurable extrusion and hardware library in Onshape" loading="lazy"></div>
         </div>
-
-        <!-- Gantry -->
-        <div class="component-item">
-          <h3>Cartesian Gantry System</h3>
-          <div class="component-content">
-            <div class="component-media-flex">
-              <div class="component-media">
-                <img src="images/nrc-gantry1.jpg" alt="Cartesian gantry system - side view" />
-              </div>
-              <div class="component-media">
-                <img src="images/nrc-gantry2.jpg" alt="Cartesian gantry system - front view" />
-              </div>
-            </div>
-            <div class="component-description">
-              <p>
-                Designed, modeled, assembled, and tested a Cartesian gantry system using a dual leadscrew design for the Z‑axis and a belt‑driven X‑axis. Both axes were driven by stepper motors, with limit switches on both sides of the Z‑axis and the X‑axis for leveling and homing. The X‑axis featured a custom screw‑tensioner mechanism for tensioning the GT2 timing belt, ensuring consistent and precise movement throughout the system's operation. Aluminum V‑groove extrusions and V‑wheels were used as linear guides.
-              </p>
-            </div>
-          </div>
+        <div class="prose">
+          <p>
+            I built and maintained a live Onshape model of every subsystem, so the
+            mechanical, electrical, and software groups all referenced one source of
+            truth instead of three. Configurable aluminum extrusion and hardware
+            libraries kept the unique part count down and made BOM generation quick,
+            and sub-assemblies kept the main workspace organized and the load times
+            survivable.
+          </p>
         </div>
+      </article>
 
-        <!-- Pick and Place -->
-        <div class="component-item">
-          <h3>Pick-and-Place Mechanism</h3>
-          <div class="component-content">
-            <div class="component-media-flex">
-              <div class="component-media">
-                <img src="images/nrc-pick-place-1.jpg" alt="Forklift-like pick-and-place mechanism" />
-              </div>
-              <div class="component-media">
-                <img src="images/nrc-pick-place-2.jpg" alt="2-stage belt drive system detail" />
-              </div>
-            </div>
-            <div class="component-description">
-              <p>
-                Designed, modeled, assembled, and tested a forklift‑like pick‑and‑place mechanism to remove prints from the print bed. I implemented oversized plates for the printer so a portion would hang off the side of the heater. The forklift would insert from both sides and, using embedded magnets and the Z motion of the gantry, lift the plates (and any prints) off of the printer. This design left a section of the plate hanging off the side of the forklift, which rested on the plate holders as the gantry dropped off the plate in the shelf. The extrusion system used a two‑stage belt drive to maximize range. Drawer slides were selected for their thin profile and resistance to bending. The magnets eliminated the need for mechanical grippers, simplifying the system while improving reliability.
-              </p>
-            </div>
-          </div>
+      <article class="card part">
+        <h3><span class="n">02</span> Cartesian gantry system</h3>
+        <div class="media-pair">
+          <div class="media"><img src="images/nrc-gantry1.jpg" alt="Cartesian gantry system, side view" loading="lazy"></div>
+          <div class="media"><img src="images/nrc-gantry2.jpg" alt="Cartesian gantry system, front view" loading="lazy"></div>
         </div>
-
-        <!-- Shelving -->
-        <div class="component-item">
-          <h3>Shelving Units</h3>
-          <div class="component-content">
-            <div class="component-media-flex">
-              <div class="component-media">
-                <img src="images/nrc-shelving1.jpg" alt="Aluminum extrusion shelving units" />
-              </div>
-              <div class="component-media">
-                <img src="images/nrc-shelving2.jpg" alt="Custom plate holders with integrated limit switches" />
-              </div>
-            </div>
-            <div class="component-description">
-              <p>
-                Designed, modeled, assembled, and tested shelving units for the stacked printer assembly, housing two Voron 2.4 printers and the plate holders. The shelving units were constructed from aluminum extrusions for rigidity and ease of assembly. The back‑left array of plate holders compactly housed a limit switch in each rung, allowing the system to check if a plate had been deposited or picked up at any given time, providing real‑time feedback to the control software.
-              </p>
-            </div>
-          </div>
+        <div class="prose">
+          <p>
+            Designed, modeled, assembled, and tested a Cartesian gantry using a dual
+            leadscrew Z axis and a belt driven X axis, both stepper driven, with limit
+            switches on each end for leveling and homing. The X axis carries a custom
+            screw tensioner for the GT2 belt so motion stayed consistent across a long
+            competition day. Aluminum V groove extrusions and V wheels serve as the
+            linear guides.
+          </p>
         </div>
+      </article>
 
-        <!-- Team Management -->
-        <div class="component-item">
-          <h3>Team Management</h3>
-          <div class="component-content">
-            <div class="component-media">
-              <img src="images/nrc-gantt.jpg" alt="GitHub Projects Gantt chart for workcell schedule" />
-            </div>
-            <div class="component-description">
-              <p>
-                Built and maintained a comprehensive GitHub Projects workspace that included a dynamic Gantt chart. This single view aligned deliverables across hardware and software sub‑teams, documented tasks, and surfaced blockers early, keeping the 15‑person team on schedule.
-              </p>
-            </div>
-          </div>
+      <article class="card part">
+        <h3><span class="n">03</span> Pick-and-place mechanism</h3>
+        <div class="media-pair">
+          <div class="media"><img src="images/nrc-pick-place-1.jpg" alt="Forklift style pick-and-place mechanism" loading="lazy"></div>
+          <div class="media"><img src="images/nrc-pick-place-2.jpg" alt="Two stage belt drive detail" loading="lazy"></div>
         </div>
-      </div>
+        <div class="prose">
+          <p>
+            A forklift style mechanism that pulls finished prints off the bed. I ran
+            oversized build plates so a strip of each plate hangs off the side of the
+            heater. The forklift inserts from both sides and, using embedded magnets
+            plus the gantry's Z motion, lifts the plate and whatever is printed on it
+            clear of the printer. The overhanging strip then rests on the plate holders
+            as the gantry drops it into the shelf.
+          </p>
+          <p>
+            The extension uses a two stage belt drive to maximize reach, on drawer
+            slides picked for their thin profile and resistance to bending. The magnets
+            removed the need for mechanical grippers entirely, which made the whole
+            thing simpler and more reliable at the same time.
+          </p>
+        </div>
+      </article>
 
-      <div class="project-technology">
-        <h2>Technologies Used</h2>
-        <ul>
-          <li>Onshape for CAD design and digital‑twin management</li>
-          <li>Dual leadscrew Z‑axis with belt‑driven X‑axis</li>
-          <li>Two‑stage belt drive system for extended reach</li>
-          <li>Magnetic plate attachment system</li>
-          <li>Limit switches for homing and position verification</li>
-          <li>Aluminum extrusion framework</li>
-          <li>Voron 2.4 3D printers</li>
-          <li>GitHub Projects for project and schedule tracking</li>
-        </ul>
-      </div>
+      <article class="card part">
+        <h3><span class="n">04</span> Shelving units</h3>
+        <div class="media-pair">
+          <div class="media"><img src="images/nrc-shelving1.jpg" alt="Aluminum extrusion shelving units" loading="lazy"></div>
+          <div class="media"><img src="images/nrc-shelving2.jpg" alt="Custom plate holders with integrated limit switches" loading="lazy"></div>
+        </div>
+        <div class="prose">
+          <p>
+            Designed, modeled, assembled, and tested the shelving for the stacked printer
+            assembly, housing two Voron 2.4 printers and the plate holders, built from
+            aluminum extrusion for rigidity and easy assembly. The back left array of
+            plate holders hides a limit switch in every rung, so the control software
+            always knows whether a plate was actually deposited or actually picked up
+            rather than assuming it.
+          </p>
+        </div>
+      </article>
 
-      <div class="project-awards">
-        <h2>Awards</h2>
-        <div class="awards-container">
-          <div class="award-item">
-            <div class="award-icon">🏆</div>
-            <div class="award-details">
-              <h3>Gold Award</h3>
-              <p>National Robotics Challenge – Manufacturing Workcell Category, 2025</p>
-            </div>
-          </div>
-          <div class="award-item">
-            <div class="award-icon">🏅</div>
-            <div class="award-details">
-              <h3>Honda Innovation Award</h3>
-              <p>National Robotics Challenge, 2025</p>
-            </div>
-          </div>
+      <article class="card part">
+        <h3><span class="n">05</span> Running the team</h3>
+        <div class="media"><img src="images/nrc-gantt.jpg" alt="GitHub Projects Gantt chart for the workcell schedule" loading="lazy"></div>
+        <div class="prose">
+          <p>
+            I built and maintained a GitHub Projects workspace with a live Gantt chart.
+            One view aligned deliverables across the hardware and software sub-teams,
+            documented tasks, and surfaced blockers early enough to do something about
+            them, which is what kept 15 people on schedule.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="proj-block reveal">
+      <h2>Technologies</h2>
+      <ul class="tech">
+        <li>Onshape, CAD and digital twin</li>
+        <li>Dual leadscrew Z axis</li>
+        <li>Belt driven X axis with custom tensioner</li>
+        <li>Two stage belt drive</li>
+        <li>Magnetic plate attachment</li>
+        <li>Limit switches for homing and verification</li>
+        <li>Aluminum extrusion frame</li>
+        <li>Voron 2.4 printers</li>
+        <li>GitHub Projects</li>
+      </ul>
+    </div>
+
+    <div class="proj-block reveal">
+      <h2>Awards</h2>
+      <div class="win-row">
+        <div class="card award">
+          <span class="mark">*</span>
+          <h3>Gold Award</h3>
+          <p>National Robotics Challenge, Manufacturing Workcell category</p>
+          <span class="yr">2025</span>
+        </div>
+        <div class="card award">
+          <span class="mark">*</span>
+          <h3>Honda Innovation Award</h3>
+          <p>National Robotics Challenge</p>
+          <span class="yr">2025</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Zach Moas. All rights reserved.</p>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<div class="tank strip" data-tank aria-hidden="true"></div>
+
+<footer>
+  <div class="shell foot-row">
+    <span>&copy; 2025 Zach Moas</span>
+    <span><a href="index.html#projects">Back to projects</a></span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script src="aquarium.js"></script>
 </body>
 </html>

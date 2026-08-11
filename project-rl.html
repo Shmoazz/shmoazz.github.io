@@ -1,155 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reinforcement Learning Experiment - Zach Moas Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="project-detail.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Location Based Intrinsic Reward | Zach Moas</title>
+<meta name="description" content="A reinforcement learning experiment in Unity ML-Agents: does a location based intrinsic reward make a hummingbird agent converge faster than extrinsic reward alone?">
+<meta name="theme-color" content="#f7f7ef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.className="js"</script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Reinforcement Learning Experiment</div>
-            <ul class="nav-links">
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#experience">Experience</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="project-detail">
-        <div class="project-header">
-            <h1>Location-Based Intrinsic Reward in RL</h1>
-            <div class="project-meta">
-                <span class="project-date">2021</span>
-                <a href="index.html#projects" class="back-link">Back to Projects</a>
-            </div>
+<header>
+  <nav>
+    <a href="index.html" class="logo">Zach Moas<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="proj-hero">
+  <div class="shell">
+    <a href="index.html#projects" class="back-link"><span class="arrow">&larr;</span> All projects</a>
+    <h1>Location Based Intrinsic Reward</h1>
+    <div class="proj-meta">
+      <span class="meta-chip">2021</span>
+      <span class="meta-chip">Unity ML-Agents</span>
+      <span class="meta-chip">Solo experiment</span>
+    </div>
+  </div>
+</section>
+
+<section class="proj-body">
+  <div class="shell">
+
+    <div class="proj-block reveal">
+      <div class="media-pair">
+        <div class="media"><img src="images/rl-experiment-main.jpg" alt="Hummingbird agent in the Unity environment" loading="lazy"></div>
+        <div class="media"><img src="images/rl-experiment-results.jpg" alt="TensorBoard learning curves for both models" loading="lazy"></div>
+      </div>
+    </div>
+
+    <div class="proj-block reveal">
+      <h2>The question</h2>
+      <div class="prose">
+        <p>
+          Standard practice rewards an agent only for the goal itself. I wanted to know
+          whether paying it for behavior that tends to lead to the goal would train it
+          faster, so I built a hummingbird agent in Unity that had to collect nectar from
+          flowers, and gave one copy of it a reason to care about being in the right
+          neighborhood.
+        </p>
+      </div>
+    </div>
+
+    <div class="proj-block reveal">
+      <h2>How it was built</h2>
+
+      <article class="card part">
+        <h3><span class="n">01</span> The environment</h3>
+        <div class="media"><img src="images/rl-unity-environment.jpg" alt="Unity environment with hummingbird and flowers" loading="lazy"></div>
+        <div class="prose">
+          <p>
+            A Unity environment where the hummingbird navigates to collect nectar. The
+            agent observes its own position and orientation in 3D plus a vector from the
+            tip of its beak to the nearest flower's nectar hitbox. The baseline is purely
+            extrinsic: reward arrives only when the beak lands inside the hitbox, and
+            never before.
+          </p>
         </div>
+      </article>
 
-        <div class="project-content">
-            <div class="project-media">
-                <div class="component-media-flex">
-                    <div class="component-media">
-                        <img src="images/rl-experiment-main.jpg" alt="Hummingbird agent in Unity environment">
-                    </div>
-                    <div class="component-media">
-                        <img src="images/rl-experiment-results.jpg" alt="TensorBoard learning curves comparison">
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-description">
-                <h2>Project Overview</h2>
-                <p>
-                    This project explored the effectiveness of intrinsic reward systems in reinforcement learning. 
-                    I experimented with a hummingbird agent in a Unity virtual environment that was trained to collect
-                    nectar from flowers. The standard approach only rewards the agent for accomplishing the primary goal
-                    (an extrinsic reward system), but I hypothesized that providing additional rewards for behaviors that
-                    might lead to the goal could improve training efficiency and performance.
-                </p>
-            </div>
-
-            <div class="project-contributions">
-                <h2>Key Components</h2>
-
-                <div class="component-item">
-                    <h3>Virtual Environment Setup</h3>
-                    <div class="component-content">
-                        <div class="component-media">
-                            <img src="images/rl-unity-environment.jpg" alt="Unity environment with hummingbird and flowers">
-                        </div>
-                        <div class="component-description">
-                            <p>
-                                I implemented a virtual environment in Unity where a hummingbird agent navigated to collect nectar from flowers.
-                                The agent received observational inputs including its position and orientation in 3D space, as well as a
-                                vector between the tip of its beak and the closest flower's nectar hitbox. The baseline model used an
-                                extrinsic reward system, where the agent was only rewarded for successfully collecting nectar by positioning
-                                its beak inside a flower's nectar hitbox.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="component-item">
-                    <h3>Location-Based Intrinsic Reward System</h3>
-                    <div class="component-content">
-                        <div class="component-media-flex">
-                            <div class="component-media">
-                                <img src="images/rl-triggers.jpg" alt="Triangular prism triggers in a circular arrangement">
-                            </div>
-                            <div class="component-media">
-                                <img src="images/rl-rewards-diagram.jpg" alt="Diagram showing the reward system structure">
-                            </div>
-                        </div>
-                        <div class="component-description">
-                            <p>
-                                I designed a novel location-based intrinsic reward system that supplemented the primary goal with additional rewards
-                                for productive exploration. This involved creating triangular prism-shaped triggers arranged in a circular "pizza slice"
-                                pattern at the same Z-level as the flowers. When the agent entered these trigger zones, it received a small reward, and
-                                the trigger was then disabled for the remainder of that training episode.
-                            </p>
-                            <p>
-                                The key innovation was rewarding the agent for exploring the Z-level where flowers were located, even before
-                                directly interacting with the flowers themselves. This encouraged the agent to stay in productive areas and
-                                explore within those areas, potentially discovering more efficient paths to nectar collection.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="component-item">
-                    <h3>Training and Evaluation</h3>
-                    <div class="component-content">
-                        <div class="component-media">
-                            <img src="images/rl-tensorboard.jpg" alt="TensorBoard results comparing both approaches">
-                        </div>
-                        <div class="component-description">
-                            <p>
-                                I trained both the standard extrinsic-only reward model and the enhanced intrinsic+extrinsic reward model
-                                using the Unity ML-Agents framework with a Python backend. The training process was managed through an
-                                Anaconda environment, and a custom configuration file specified the neural network architecture and
-                                hyperparameters. TensorBoard was used to visualize and compare performance metrics between the two approaches
-                                over time.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-technology">
-                <h2>Technologies Used</h2>
-                <ul>
-                    <li>Unity game engine for environment creation</li>
-                    <li>Unity ML-Agents package for reinforcement learning implementation</li>
-                    <li>Python API for neural network interface</li>
-                    <li>C# for Unity scripts and trigger functionality</li>
-                    <li>Anaconda for Python environment management</li>
-                    <li>TensorBoard for visualizing training metrics</li>
-                </ul>
-            </div>
-
-            <div class="project-results">
-                <h2>Results</h2>
-                <p>
-                    The location-based intrinsic reward system demonstrated faster convergence to optimal behavior compared to the
-                    standard extrinsic-only reward approach. Agents trained with the combined reward system showed more efficient
-                    exploration patterns, spending more time in areas with potential rewards and less time in unproductive regions.
-                    This project highlights the importance of reward shaping in reinforcement learning and demonstrates how
-                    well-designed intrinsic rewards can guide agents toward desirable behaviors even before they achieve the
-                    primary goal.
-                </p>
-            </div>
+      <article class="card part">
+        <h3><span class="n">02</span> The intrinsic reward</h3>
+        <div class="media-pair">
+          <div class="media"><img src="images/rl-triggers.jpg" alt="Triangular prism triggers in a circular arrangement" loading="lazy"></div>
+          <div class="media"><img src="images/rl-rewards-diagram.jpg" alt="Diagram of the reward structure" loading="lazy"></div>
         </div>
-    </section>
+        <div class="prose">
+          <p>
+            I added triangular prism triggers arranged in a circular pizza slice pattern
+            at the same Z level as the flowers. Entering one pays out a small reward and
+            disables that trigger for the rest of the episode, so the agent is paid for
+            covering new ground rather than for hovering in a spot it already found.
+          </p>
+          <p>
+            The idea being tested is narrow on purpose: reward the agent for exploring
+            the altitude where flowers live, before it has ever touched one. If that
+            shapes behavior, it should show up as faster convergence, not just a
+            different looking policy.
+          </p>
+        </div>
+      </article>
 
-    <footer>
-        <p>© 2025 Zach Moas. All rights reserved.</p>
-    </footer>
+      <article class="card part">
+        <h3><span class="n">03</span> Training and evaluation</h3>
+        <div class="media"><img src="images/rl-tensorboard.jpg" alt="TensorBoard comparison of both approaches" loading="lazy"></div>
+        <div class="prose">
+          <p>
+            Both models trained through Unity ML-Agents against a Python backend in an
+            Anaconda environment, with a config file pinning the network architecture and
+            hyperparameters so the only difference between the runs was the reward. I used
+            TensorBoard to compare them over time.
+          </p>
+        </div>
+      </article>
+    </div>
 
-    <script src="script.js"></script>
+    <div class="proj-block reveal">
+      <h2>Technologies</h2>
+      <ul class="tech">
+        <li>Unity</li>
+        <li>Unity ML-Agents</li>
+        <li>Python API for the network interface</li>
+        <li>C# for scripts and trigger logic</li>
+        <li>Anaconda</li>
+        <li>TensorBoard</li>
+      </ul>
+    </div>
+
+    <div class="proj-block reveal">
+      <h2>Results</h2>
+      <div class="callout">
+        <span class="kicker">What came out of it</span>
+        <p>
+          The location based intrinsic reward converged faster than the extrinsic only
+          baseline. The shaped agents explored more efficiently, spending more of the
+          episode where reward was possible and less of it in dead space. The takeaway I
+          kept: reward shaping is not a detail you tune at the end, it decides what the
+          agent bothers to learn.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="tank strip" data-tank aria-hidden="true"></div>
+
+<footer>
+  <div class="shell foot-row">
+    <span>&copy; 2025 Zach Moas</span>
+    <span><a href="index.html#projects">Back to projects</a></span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script src="aquarium.js"></script>
 </body>
 </html>

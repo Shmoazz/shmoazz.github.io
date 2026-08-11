@@ -1,220 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zach Moas | Robotics Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zach Moas | Robotics Engineer</title>
+<meta name="description" content="Zach Moas, robotics engineer. Autonomous systems, mechatronics, and CAD, taken from concept through prototype to a machine that runs.">
+<meta name="theme-color" content="#f7f7ef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.className="js"</script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Zach Moas</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="hero">
-    <div class="hero-content">
-        <h1>Hello, I'm Zach Moas</h1>
-        <p>Robotics Engineer</p>
-        <button class="cta-button">Explore My Work</button>
-    </div>
-    <div class="hero-image-container">
-        <div class="hero-image-gradient"></div>
-        <div class="hero-image">
-            <!-- Replace "your-photo.jpg" with the actual path to your image -->
-            <img src="images/your-photo.JPG" alt="Zach Moas">
+<header>
+  <nav>
+    <a href="#top" class="logo">Zach Moas<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ========================= hero ========================= -->
+<section id="top">
+  <div class="shell">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="kicker">Robotics engineer</span>
+        <h1>Zach Moas<span class="sea">.</span></h1>
+        <p class="hero-lede">
+          I take robots from a sketch to a machine that runs on competition day:
+          autonomous systems, mechatronics, and a lot of CAD.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">See the work <span class="arrow">&rarr;</span></a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
         </div>
+        <div class="status">
+          <span class="led"></span>
+          <span id="clock">--:--:--</span>
+          <span class="sep">/</span>
+          <span>Manassas, VA</span>
+          <span class="sep">/</span>
+          <span>B.S. Robotics &amp; Mechatronics, Virginia Tech</span>
+        </div>
+      </div>
+
+      <figure class="hero-photo">
+        <div class="frame">
+          <img src="images/zach.jpg" alt="Zach Moas" width="1400" height="1100">
+          <figcaption class="caption">ZACH MOAS &middot; MANASSAS, VA</figcaption>
+        </div>
+      </figure>
     </div>
+  </div>
 </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a hands-on Robotics Engineer with experience in autonomous systems, mechatronics, and CAD, currently pursuing a B.S. in Robotics and Mechatronics at Virginia Tech (In-Major GPA: 3.5). I have a proven ability to lead technical teams, taking complex robotic systems from initial concept through design, prototyping, and successful deployment in competitive and research environments. I hold an active Secret Level Clearance.</p>
-        
-        <div class="skills-container">
-            <h3>Skills</h3>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Software & Programming</h4>
-                    <ul>
-                        <li>Python</li>
-                        <li>MATLAB</li>
-                        <li>C/C++</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>CAD & Design</h4>
-                    <ul>
-                        <li>SolidWorks</li>
-                        <li>OnShape</li>
-                        <li>Fusion 360</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Tools & Platforms</h4>
-                    <ul>
-                        <li>PlatformIO</li>
-                        <li>Arduino</li>
-                        <li>Simulink</li>
-                        <li>Git</li>
-                    </ul>
-                </div>
-            </div>
+<!-- the tank. it is here to fill the room, and it is fed by clicking it. -->
+<div class="tank band" data-tank aria-hidden="true"></div>
+
+<!-- ========================= about ========================= -->
+<section id="about">
+  <div class="shell">
+    <div class="section-head reveal">
+      <span class="kicker">01 / About</span>
+      <h2>Hands on, start to finish</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="about-grid">
+      <div class="card about-copy reveal">
+        <p>
+          I am a hands-on robotics engineer with experience in autonomous systems,
+          mechatronics, and CAD, currently finishing a B.S. in Robotics and
+          Mechatronics at Virginia Tech (in-major GPA 3.5).
+        </p>
+        <p>
+          The part I care about is the whole arc: leading a technical team through
+          concept, design, prototyping, and deployment, and being there when the
+          thing either works or does not. That has meant competition robots under
+          hard size limits, a print farm that runs itself, and a printer chasing
+          <strong>one micron</strong> of repeatability.
+        </p>
+        <span class="clearance"><span class="led"></span> Active Secret clearance</span>
+      </div>
+
+      <div class="card skills reveal" data-i="1">
+        <h3>What I reach for</h3>
+        <div class="skill-group">
+          <h4>Software</h4>
+          <ul class="chips">
+            <li>Python</li><li>MATLAB</li><li>C / C++</li><li>Simulink</li>
+          </ul>
         </div>
-    </section>
-
-    <section id="experience">
-        <div class="experience-container">
-            <div class="experience-header">
-                <h2>Experience</h2>
-                <p>My professional journey in robotics engineering.</p>
-            </div>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-date">May 2024 - Present</div>
-                    <div class="experience-content">
-                        <h3>Robotics Engineering Intern</h3>
-                        <h4>Applied Research Associates, Inc.</h4>
-                        <ul>
-                            <li>Researching and prototyping subsystems for a fully autonomous UAV platform.</li>
-                            <li>Designing dynamic robotic mechanisms and associated actuator assemblies.</li>
-                            <li>Integrating sensors, microcontrollers (MCUs), and RF communication modules.</li>
-                            <li>Modeling and simulating system behavior using MATLAB.</li>
-                            <li>Designing and fabricating electronics enclosures for field deployment.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-date">Apr 2024 - Present</div>
-                    <div class="experience-content">
-                        <h3>Chief Engineer</h3>
-                        <h4>Competitive Robotics Organization at Virginia Tech</h4>
-                        <ul>
-                            <li>Led robotics team to a first-place victory in the National Robotics Challenge, Manufacturing Workcell category.</li>
-                            <li>Designed and implemented a 1.5 × 1 meter vertical Cartesian gantry system to move prints throughout the assembly.</li>
-                            <li>Engineered a pick-and-place mechanism for print plate manipulation.</li>
-                            <li>Created modular shelving units for printer housing and print storage, integrating sensor feedback.</li>
-                            <li>Produced an engineering design plan and delegated tasks using project management software </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-date">May 2023 - Aug 2023</div>
-                    <div class="experience-content">
-                        <h3>Mechanical Engineering Intern</h3>
-                        <h4>Applied Research Associates, Inc.</h4>
-                        <ul>
-                            <li>Contributed to full lifecycle prototyping for defense-related projects.</li>
-                            <li>Modeled and fabricated components for hydraulic and electric actuation systems.</li>
-                            <li>Designed mechanical assemblies considering specific manufacturing processes and sourcing limitations.</li>
-                            <li>Used FEA software to ensure designs adhere to load conditions.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-date">Jan 2023 - Apr 2024</div>
-                    <div class="experience-content">
-                        <h3>Mechanical Lead</h3>
-                        <h4>Competitive Robotics Organization at Virginia Tech</h4>
-                        <ul>
-                            <li>Led mechanical design, prototyping, and fabrication for IEEE SoutheastCon 2023 & 2024 autonomous robots.</li>
-                            <li>Spearheaded the design of the robot that achieved the highest scoring run among 35 universities at SoutheastCon 2024.</li>
-                            <li>Developed key mechanisms including chassis, linkages, deployable bridge, and object manipulators under strict size constraints.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="skill-group">
+          <h4>CAD &amp; design</h4>
+          <ul class="chips">
+            <li>SolidWorks</li><li>Onshape</li><li>Fusion 360</li><li>FEA</li>
+          </ul>
         </div>
-    </section>
-
-    <section id="projects">
-        <div class="projects-container">
-            <div class="projects-header">
-                <h2>Projects</h2>
-                <p>A showcase of my non-industry projects.</p>
-            </div>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="images/nrc-thumbnail.jpg" alt="National Robotics Challenge">
-                    </div>
-                    <h3>National Robotics Challenge</h3>
-                    <p>Led the design of an award-winning automated 3D printing workcell. Using a web-based queue system the dual printer system can autonomously perform prints and swap it's own plates.</p>
-                    <a href="project-nrc.html" class="project-link">View Project</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="images/ieee-thumbnail.jpg" alt="IEEE SoutheastCon Robot">
-                    </div>
-                    <h3>IEEE SoutheastCon</h3>
-                    <p>Helped design and build the autonomous robot that achieved the highest single round score and won the Hardware Design Competition at IEEE SoutheastCon 2024.</p>
-                    <a href="project-ieee.html" class="project-link">View Project</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="images/roboleague-thumbnail.jpg" alt="RoboLeague Hackathon Project">
-                    </div>
-                    <h3>RoboLeague Hackathon Project</h3>
-                    <p>Rapidly prototyped an custom Bluetooth RC car soccer game inspired by Rocket League during a 30-hour hackathon, including hardware design and mobile app integration.</p>
-                    <a href="project-roboleague.html" class="project-link">View Project</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="images/roboticarm-thumbnail.jpg" alt="5 DOF Robotic Arm">
-                    </div>
-                    <h3>5 DOF Robotic Arm (Ongoing)</h3>
-                    <p>Developing a 3D-printed robotic arm as a personal platform for implementing and testing kinematics, control, and motion planning algorithms.</p>
-                    <a href="project-roboticarm.html" class="project-link">View Project</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="images/rl-experiment-thumbnail.jpg" alt="Reinforcement Learning Experiment">
-                    </div>
-                    <h3>Reinforcement Learning Experiment</h3>
-                    <p>Tested reward structures for a reinforcement learning agent.
-                        Developed a location-based intrinsic reward system to improve convergence.</p>
-                    <a href="project-rl.html" class="project-link">View Project</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="images/cnc-setup-thumbnail.jpg" alt="Mesa-Based Linux CNC Setup">
-                    </div>
-                    <h3>Mesa-Based LinuxCNC Setup</h3>
-                    <p>For senior capstone I worked on a custom 3D printer machine controller using Mesa hardware and LinuxCNC software, featuring fine linear scales and high torque stepper motors for precision manufacturing tasks.</p>
-                    <a href="project-cnc.html" class="project-link">View Project</a>
-                </div>
-            </div>
+        <div class="skill-group">
+          <h4>Tools &amp; platforms</h4>
+          <ul class="chips">
+            <li>PlatformIO</li><li>Arduino</li><li>LinuxCNC</li><li>Git</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="awards">
-        <h2>Awards</h2>
-        <ul class="awards-list">
-            <li>Honda Innovation Award, National Robotics Challenge – Manufacturing Workcell, 2025</li>
-            <li>Gold Award (1st Place), National Robotics Challenge – Manufacturing Workcell, 2025</li>
-            <li>First Place, Hardware Design Competition – IEEE SoutheastCon 2024</li>
-        </ul>
-    </section>
+<!-- ========================= experience ========================= -->
+<section id="experience">
+  <div class="shell">
+    <div class="section-head reveal">
+      <span class="kicker">02 / Experience</span>
+      <h2>Where I have built things</h2>
+      <span class="rule"></span>
+    </div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out via email or phone.</p>
-        <p><a href="mailto:zach21@vt.edu">zach21@vt.edu</a> | (571) 359-0569</p>
-        <p>Based in Manassas, VA</p>
-    </section>
+    <div class="timeline">
+      <article class="xp now reveal">
+        <div class="xp-when">May 2024<br>&rarr; now</div>
+        <div class="xp-body">
+          <h3>Robotics Engineering Intern</h3>
+          <div class="xp-role">Applied Research Associates, Inc.</div>
+          <ul>
+            <li>Researching and prototyping subsystems for a fully autonomous UAV platform.</li>
+            <li>Designing dynamic robotic mechanisms and their actuator assemblies.</li>
+            <li>Integrating sensors, microcontrollers, and RF communication modules.</li>
+            <li>Modeling and simulating system behavior in MATLAB.</li>
+            <li>Designing and fabricating electronics enclosures for field deployment.</li>
+          </ul>
+        </div>
+      </article>
 
-    <footer>
-        <p>© 2025 Zach Moas. All rights reserved.</p>
-    </footer>
+      <article class="xp now reveal">
+        <div class="xp-when">Apr 2024<br>&rarr; now</div>
+        <div class="xp-body">
+          <h3>Chief Engineer</h3>
+          <div class="xp-role">Competitive Robotics Organization at Virginia Tech</div>
+          <ul>
+            <li>Led the team to first place in the National Robotics Challenge, Manufacturing Workcell category.</li>
+            <li>Designed a 1.5 x 1 m vertical Cartesian gantry to move prints through the assembly.</li>
+            <li>Engineered a pick-and-place mechanism for print plate manipulation.</li>
+            <li>Built modular shelving for printer housing and print storage, with sensor feedback in every rung.</li>
+            <li>Wrote the engineering design plan and ran task delegation for a 15 person team.</li>
+          </ul>
+        </div>
+      </article>
 
-    <script src="script.js"></script>
+      <article class="xp reveal">
+        <div class="xp-when">May 2023<br>&rarr; Aug 2023</div>
+        <div class="xp-body">
+          <h3>Mechanical Engineering Intern</h3>
+          <div class="xp-role">Applied Research Associates, Inc.</div>
+          <ul>
+            <li>Contributed to full lifecycle prototyping for defense related projects.</li>
+            <li>Modeled and fabricated components for hydraulic and electric actuation systems.</li>
+            <li>Designed assemblies around specific manufacturing processes and sourcing limits.</li>
+            <li>Used FEA to confirm designs held up under their load conditions.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="xp reveal">
+        <div class="xp-when">Jan 2023<br>&rarr; Apr 2024</div>
+        <div class="xp-body">
+          <h3>Mechanical Lead</h3>
+          <div class="xp-role">Competitive Robotics Organization at Virginia Tech</div>
+          <ul>
+            <li>Led mechanical design, prototyping, and fabrication for the IEEE SoutheastCon 2023 and 2024 autonomous robots.</li>
+            <li>Spearheaded the robot that posted the highest scoring run of 35 universities at SoutheastCon 2024.</li>
+            <li>Developed the chassis, linkages, deployable bridge, and object manipulators under strict volume constraints.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= projects ========================= -->
+<section id="projects">
+  <div class="shell">
+    <div class="section-head reveal">
+      <span class="kicker">03 / Projects</span>
+      <h2>Things I built outside a job</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="project-grid">
+      <a href="project-nrc.html" class="card project-card reveal" data-i="0">
+        <div class="project-thumb"><img src="images/nrc-thumbnail.jpg" alt="National Robotics Challenge workcell" loading="lazy"></div>
+        <div class="project-body">
+          <span class="kicker">2024 &ndash; 2025</span>
+          <h3>National Robotics Challenge</h3>
+          <p>An automated 3D printing workcell. Two Voron printers, a web based print queue, and a gantry that swaps its own plates with nobody in the room.</p>
+          <span class="tag-win">Gold + Honda Innovation</span>
+          <span class="project-go">View project <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a href="project-ieee.html" class="card project-card reveal" data-i="1">
+        <div class="project-thumb"><img src="images/ieee-thumbnail.jpg" alt="IEEE SoutheastCon robot" loading="lazy"></div>
+        <div class="project-body">
+          <span class="kicker">2023 &ndash; 2024</span>
+          <h3>IEEE SoutheastCon</h3>
+          <p>An autonomous robot inside a 12 inch cube that had to move three kinds of game piece and lay its own bridge. Highest single round score of 35 universities.</p>
+          <span class="tag-win">1st, Hardware Design</span>
+          <span class="project-go">View project <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a href="project-cnc.html" class="card project-card reveal" data-i="2">
+        <div class="project-thumb"><img src="images/cnc-setup-thumbnail.jpg" alt="Mesa based LinuxCNC electronics" loading="lazy"></div>
+        <div class="project-body">
+          <span class="kicker">2024 &ndash; 2025</span>
+          <h3>Micron Precision Printer</h3>
+          <p>Senior capstone: a research grade 3D printer on Mesa hardware and LinuxCNC, with ground ball screws and 1 micron linear scales, printing conductive traces.</p>
+          <span class="project-go">View project <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a href="project-roboleague.html" class="card project-card reveal" data-i="0">
+        <div class="project-thumb"><img src="images/roboleague-thumbnail.jpg" alt="RoboLeague hackathon car" loading="lazy"></div>
+        <div class="project-body">
+          <span class="kicker">2024</span>
+          <h3>RoboLeague</h3>
+          <p>Rocket League, but the cars are real. A custom ESP32 RC car and an iOS app for control and scorekeeping, modeled, printed, and assembled inside 30 hours.</p>
+          <span class="project-go">View project <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a href="project-roboticarm.html" class="card project-card reveal" data-i="1">
+        <div class="project-thumb"><img src="images/roboticarm-thumbnail.jpg" alt="5 DOF robotic arm CAD" loading="lazy"></div>
+        <div class="project-body">
+          <span class="kicker">Ongoing</span>
+          <h3>5 DOF Robotic Arm</h3>
+          <p>A fully 3D printed arm built as my own test bench for kinematics, control, and motion planning. Currently a CAD model and a lot of opinions about assembly.</p>
+          <span class="project-go">View project <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+
+      <a href="project-rl.html" class="card project-card reveal" data-i="2">
+        <div class="project-thumb"><img src="images/rl-experiment-thumbnail.jpg" alt="Reinforcement learning experiment" loading="lazy"></div>
+        <div class="project-body">
+          <span class="kicker">2021</span>
+          <h3>Reinforcement Learning</h3>
+          <p>Testing whether reward shaping earns its keep. I gave a hummingbird agent a location based intrinsic reward and watched it converge faster than the baseline.</p>
+          <span class="project-go">View project <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= awards ========================= -->
+<section id="awards">
+  <div class="shell">
+    <div class="section-head reveal">
+      <span class="kicker">04 / Awards</span>
+      <h2>On the shelf</h2>
+      <span class="rule"></span>
+    </div>
+
+    <ul class="awards">
+      <li class="card award reveal" data-i="0">
+        <span class="mark">*</span>
+        <h3>Gold Award, 1st Place</h3>
+        <p>National Robotics Challenge, Manufacturing Workcell</p>
+        <span class="yr">2025</span>
+      </li>
+      <li class="card award reveal" data-i="1">
+        <span class="mark">*</span>
+        <h3>Honda Innovation Award</h3>
+        <p>National Robotics Challenge</p>
+        <span class="yr">2025</span>
+      </li>
+      <li class="card award reveal" data-i="2">
+        <span class="mark">*</span>
+        <h3>First Place, Hardware Design</h3>
+        <p>IEEE SoutheastCon</p>
+        <span class="yr">2024</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========================= contact ========================= -->
+<section id="contact">
+  <div class="shell">
+    <div class="card contact-card reveal">
+      <div>
+        <span class="kicker">05 / Contact</span>
+        <h2>Say hello</h2>
+        <p>
+          If you are building something that has to move, I would like to hear about it.
+          Email is the fastest way to reach me.
+        </p>
+      </div>
+      <div class="contact-lines">
+        <a href="mailto:zach21@vt.edu">zach21@vt.edu</a>
+        <a href="tel:+15713590569" class="mono">(571) 359-0569</a>
+        <span class="mono">Manassas, VA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tank strip" data-tank aria-hidden="true"></div>
+
+<footer>
+  <div class="shell foot-row">
+    <span>&copy; 2025 Zach Moas</span>
+    <span>Built by hand. Fish included.</span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script src="aquarium.js"></script>
 </body>
 </html>

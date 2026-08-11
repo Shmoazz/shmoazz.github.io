@@ -1,98 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RoboLeague - Zach Moas Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="project-detail.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RoboLeague | Zach Moas</title>
+<meta name="description" content="Rocket League with real cars: a custom ESP32 RC car and an iOS app for control and scorekeeping, modeled, printed, and assembled inside a 30 hour hackathon.">
+<meta name="theme-color" content="#f7f7ef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.className="js"</script>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">RoboLeague Hackathon Project</div>
-            <ul class="nav-links">
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#experience">Experience</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="project-detail">
-        <div class="project-header">
-            <h1>RoboLeague</h1>
-            <div class="project-meta">
-                <span class="project-date">2024</span>
-                <a href="index.html#projects" class="back-link">Back to Projects</a>
-            </div>
+<header>
+  <nav>
+    <a href="index.html" class="logo">Zach Moas<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="proj-hero">
+  <div class="shell">
+    <a href="index.html#projects" class="back-link"><span class="arrow">&larr;</span> All projects</a>
+    <h1>RoboLeague</h1>
+    <div class="proj-meta">
+      <span class="meta-chip">2024</span>
+      <span class="meta-chip">30 hour hackathon</span>
+      <span class="meta-chip">ESP32 + iOS</span>
+    </div>
+  </div>
+</section>
+
+<section class="proj-body">
+  <div class="shell">
+
+    <div class="proj-block reveal">
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/EXNY-0C4o44" title="RoboLeague"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="proj-block reveal">
+      <h2>Overview</h2>
+      <div class="prose">
+        <p>
+          RoboLeague was a hackathon project: design, print, and program a small car
+          running an ESP32, with a custom iOS app for control and scorekeeping. The
+          idea came straight from Rocket League, except the pitch is a table and the
+          cars are real, so people can play a physical soccer match with remote
+          controlled cars and a live score.
+        </p>
+      </div>
+    </div>
+
+    <div class="proj-block reveal">
+      <h2>My contributions</h2>
+
+      <article class="card part">
+        <h3><span class="n">01</span> CAD, printing, and assembly</h3>
+        <div class="media"><img src="images/roboleague-car-cad.jpg" alt="CAD model of the RoboLeague car" loading="lazy"></div>
+        <div class="prose">
+          <p>
+            I modeled, printed, and assembled the entire car in under 30 hours. The
+            design had three jobs at once: mount the electronics and route the wiring,
+            stay compact and clean enough to look like a product, and go together fast,
+            because at a hackathon the assembly time is part of the design. Simple DC
+            motors and a motor controller drive it, with the ESP32 handling the wireless
+            link and the control logic.
+          </p>
         </div>
+      </article>
+    </div>
 
-        <div class="project-content">
-            <div class="project-media">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/EXNY-0C4o44" title="RoboLeague Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
+    <div class="proj-block reveal">
+      <h2>Technologies</h2>
+      <ul class="tech">
+        <li>ESP32 for wireless control</li>
+        <li>Custom iOS app, control and scorekeeping</li>
+        <li>3D printing for rapid prototyping</li>
+        <li>DC motors and motor controller</li>
+        <li>CAD for the full car assembly</li>
+      </ul>
+    </div>
 
-            <div class="project-description">
-                <h2>Project Overview</h2>
-                <p>
-                    RoboLeague was a hackathon project where we designed, printed, and programmed a small car that used
-                    an ESP32 microcontroller and a custom iOS app for control and score keeping. The project was inspired
-                    by the popular video game Rocket League, allowing players to compete in a physical soccer-like game
-                    using remote-controlled cars.
-                </p>
-            </div>
+    <div class="proj-block reveal">
+      <h2>Results</h2>
+      <div class="callout">
+        <span class="kicker">What it did</span>
+        <p>
+          Finished inside the hackathon window and working: a car you drive from the app,
+          a score that keeps itself, and a game people actually stood around and played.
+        </p>
+      </div>
+    </div>
 
-            <div class="project-contributions">
-                <h2>My Contributions</h2>
+  </div>
+</section>
 
-                <div class="component-item">
-                    <h3>CAD Design & Assembly</h3>
-                    <div class="component-content">
-                        <div class="component-media">
-                            <img src="images/roboleague-car-cad.jpg" alt="CAD design of RoboLeague car">
-                        </div>
-                        <div class="component-description">
-                            <p>
-                                I modeled, printed, and assembled the entire car assembly in less than 30 hours. The design
-                                took into consideration electronics mounting and wiring, clean and compact form factor, and
-                                ease of assembly. We used simple DC motors and a motor controller to power the car, with
-                                the ESP32 microcontroller handling wireless communication and control logic.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="tank strip" data-tank aria-hidden="true"></div>
 
-            <div class="project-technology">
-                <h2>Technologies Used</h2>
-                <ul>
-                    <li>ESP32 microcontroller for wireless communication</li>
-                    <li>Custom iOS app for control and score keeping</li>
-                    <li>3D printing for rapid prototyping</li>
-                    <li>DC motor and motor controller</li>
-                    <li>CAD software for designing the car assembly</li>
-                </ul>
-            </div>
+<footer>
+  <div class="shell foot-row">
+    <span>&copy; 2025 Zach Moas</span>
+    <span><a href="index.html#projects">Back to projects</a></span>
+  </div>
+</footer>
 
-            <div class="project-results">
-                <h2>Results</h2>
-                <p>
-                    The project was successfully completed within the hackathon timeframe, resulting in a
-                    functional remote-controlled car that could be operated through our custom app. Overall creating an engaging and interactive experience for players.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Zach Moas. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="site.js"></script>
+<script src="aquarium.js"></script>
 </body>
 </html>
