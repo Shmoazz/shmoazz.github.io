@@ -35,3 +35,15 @@ that element's own box and over-filled by a column so fish enter and leave
 from behind the page. Click a tank to feed it. It stops simulating when it
 scrolls out of view, and renders a single still frame under
 `prefers-reduced-motion`.
+
+## Tests
+
+```
+python3 tools/timeline-alignment-test.py
+```
+
+Checks that the Experience timeline's beads are centred on its spine, by
+rendering the page and measuring the pixels rather than reading computed CSS.
+That bug shipped twice because computed values said "centred" while the screen
+showed the bead two pixels to the left. It runs at six device scale factors,
+because a sub-pixel error is invisible at 1x and shows up at 110% browser zoom.
