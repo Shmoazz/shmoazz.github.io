@@ -166,9 +166,10 @@ section{padding:84px 0}
 #hero{padding:64px 0 40px}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
 .hero-copy .kicker{display:block;margin-bottom:18px}
-.hero-copy h1{margin-bottom:8px}
+/* No tagline under the name. The kicker says the job and the work says the
+   rest, so a sentence explaining both would only be in the way. */
+.hero-copy h1{margin-bottom:32px}
 .hero-copy h1 .sea{color:var(--sea)}
-.hero-lede{font-size:1.2rem;color:var(--ink-80);max-width:34ch;margin-bottom:26px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
 
 /* the status strip: an LED, a tabular clock in Manassas, a fixed fact.
