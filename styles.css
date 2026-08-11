@@ -296,7 +296,7 @@ section{padding:84px 0}
    each entry, which restarted the line at every row and left a visible gap
    at every margin: a dotted spine with beads floating next to the breaks.
    A continuous line cannot be assembled out of per-item borders. */
-.timeline{position:relative;--spine:196px}
+.timeline{position:relative;--spine:196px;--bead:11px}
 .timeline::before{
   content:"";position:absolute;left:var(--spine);top:16px;bottom:22px;
   width:1px;background:var(--line);
@@ -310,9 +310,14 @@ section{padding:84px 0}
   font-family:var(--mono);font-size:.78rem;color:var(--ink-42);
   text-align:right;white-space:nowrap;font-feature-settings:"tnum";
 }
+/* The spine is a 1px line occupying [spine, spine+1], so its optical centre
+   sits half a pixel to the RIGHT of the column edge the bead is measured
+   from. The bead has to carry that half pixel or it lands a hair to the
+   left of the line: invisible at 100%, obvious the moment anyone zooms. */
 .xp-when::after{
-  content:"";position:absolute;right:-5.5px;top:34px;
-  width:11px;height:11px;border-radius:50%;
+  content:"";position:absolute;top:34px;
+  right:calc((var(--bead) / -2) - 0.5px);
+  width:var(--bead);height:var(--bead);border-radius:50%;
   background:var(--paper);border:2px solid var(--ink-22);
   transition:border-color var(--dur) var(--ease),background var(--dur) var(--ease);
 }
@@ -488,7 +493,8 @@ footer{padding:26px 0 40px}
   .timeline{--spine:0px}
   .xp{grid-template-columns:1fr}
   .xp-when{text-align:left;padding:22px 0 0 24px;white-space:normal}
-  .xp-when::after{right:auto;left:-5.5px;top:26px}
+  /* spine at x=0 now, so the half pixel goes the other way */
+  .xp-when::after{right:auto;left:calc((var(--bead) / -2) + 0.5px);top:26px}
   .xp-body{padding:6px 0 26px 24px}
   .about-copy,.contact-card,.part{padding:26px 22px 28px}
   .tank.band{height:132px}
