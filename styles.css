@@ -290,19 +290,28 @@ section{padding:84px 0}
 
 /* ---- experience -------------------------------------------------------- */
 /* One hairline spine, a bead per role, dates in mono so the column of years
-   lines up the way a résumé should and a web page usually does not. */
-.timeline{position:relative;padding-left:0}
-.xp{display:grid;grid-template-columns:168px 1fr;gap:0}
-.xp+.xp{margin-top:14px}
+   lines up the way a resume should and a web page usually does not.
+   The spine is drawn ONCE on the container. It used to be a border-right on
+   each entry, which restarted the line at every row and left a visible gap
+   at every margin: a dotted spine with beads floating next to the breaks.
+   A continuous line cannot be assembled out of per-item borders. */
+.timeline{position:relative;--spine:196px}
+.timeline::before{
+  content:"";position:absolute;left:var(--spine);top:16px;bottom:22px;
+  width:1px;background:var(--line);
+}
+.xp{display:grid;grid-template-columns:var(--spine) 1fr;gap:0;position:relative}
+.xp+.xp{margin-top:6px}
+/* padding-top is tuned so the date's optical center matches the job title's,
+   and the bead sits on that same line */
 .xp-when{
-  position:relative;padding:28px 26px 28px 26px;
+  position:relative;padding:29px 26px 26px 0;
   font-family:var(--mono);font-size:.78rem;color:var(--ink-42);
-  border-right:1px solid var(--line);text-align:right;
-  font-feature-settings:"tnum";
+  text-align:right;white-space:nowrap;font-feature-settings:"tnum";
 }
 .xp-when::after{
   content:"";position:absolute;right:-5.5px;top:34px;
-  width:10px;height:10px;border-radius:50%;
+  width:11px;height:11px;border-radius:50%;
   background:var(--paper);border:2px solid var(--ink-22);
   transition:border-color var(--dur) var(--ease),background var(--dur) var(--ease);
 }
@@ -474,13 +483,12 @@ footer{padding:26px 0 40px}
   .nav-links{display:none}
   .project-grid{grid-template-columns:1fr}
   .media-pair,.win-row{grid-template-columns:1fr}
+  /* the spine moves to the left edge and everything hangs off it */
+  .timeline{--spine:0px}
   .xp{grid-template-columns:1fr}
-  .xp-when{
-    text-align:left;border-right:none;border-left:1px solid var(--line);
-    padding:22px 0 0 22px;
-  }
+  .xp-when{text-align:left;padding:22px 0 0 24px;white-space:normal}
   .xp-when::after{right:auto;left:-5.5px;top:26px}
-  .xp-body{padding:8px 0 26px 22px;border-left:1px solid var(--line)}
+  .xp-body{padding:6px 0 26px 24px}
   .about-copy,.contact-card,.part{padding:26px 22px 28px}
   .tank.band{height:132px}
 }
