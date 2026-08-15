@@ -172,7 +172,7 @@ section{padding:84px 0}
 .hero-copy h1 .sea{color:var(--sea)}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
 
-/* the status strip: an LED, a tabular clock in Manassas, a fixed fact.
+/* the status strip: an LED, a tabular clock in San Francisco, a fixed fact.
    Anything that ticks is mono, per the house rule. */
 .status{
   display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -378,20 +378,6 @@ section{padding:84px 0}
 .award p{font-size:.9rem;color:var(--ink-62)}
 .award .yr{font-family:var(--mono);font-size:.74rem;color:var(--ink-42)}
 
-/* ---- contact ----------------------------------------------------------- */
-.contact-card{padding:44px 44px 46px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
-.contact-card h2{margin-bottom:10px}
-.contact-card p{color:var(--ink-62);max-width:44ch}
-.contact-lines{display:flex;flex-direction:column;gap:12px;text-align:right}
-.contact-lines a{
-  font-family:var(--serif);font-variation-settings:"SOFT" 60,"WONK" 1;
-  font-size:1.7rem;font-weight:600;letter-spacing:-.02em;color:var(--sea-deep);
-  text-decoration:none;border-bottom:1.5px solid transparent;
-  transition:border-color var(--dur) var(--ease);
-}
-.contact-lines a:hover{border-bottom-color:var(--sea)}
-.contact-lines .mono{font-size:.82rem;color:var(--ink-42)}
-
 /* ---- footer ------------------------------------------------------------ */
 footer{padding:26px 0 40px}
 .foot-row{
@@ -482,8 +468,6 @@ footer{padding:26px 0 40px}
   .hero-photo{max-width:330px;justify-self:start}
   .project-grid{grid-template-columns:repeat(2,1fr)}
   .awards{grid-template-columns:1fr}
-  .contact-card{grid-template-columns:1fr;gap:24px}
-  .contact-lines{text-align:left}
 }
 @media (max-width:720px){
   body{font-size:16.5px}
@@ -500,7 +484,7 @@ footer{padding:26px 0 40px}
      vertical offset needs saying */
   .xp::after{top:26px}
   .xp-body{padding:6px 0 26px 24px}
-  .about-copy,.contact-card,.part{padding:26px 22px 28px}
+  .about-copy,.part{padding:26px 22px 28px}
   .tank.band{height:132px}
 }
 
