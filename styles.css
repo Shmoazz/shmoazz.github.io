@@ -426,6 +426,12 @@ footer{padding:26px 0 40px}
    nothing here may be cropped: on a technical image the part you would trim
    is usually the part being pointed at. */
 .media img{max-height:560px;width:auto;max-width:100%;margin:0 auto}
+/* a caption says what the picture IS, when the surrounding prose is about
+   the work rather than about this one sheet */
+.media figcaption{
+  font-family:var(--mono);font-size:.72rem;line-height:1.55;color:var(--ink-42);
+  padding:11px 16px 13px;border-top:1px solid var(--hairline);max-width:70ch;
+}
 .media-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
 .video{position:relative;padding-bottom:56.25%;height:0;border-radius:var(--rad);overflow:hidden;
        border:1px solid var(--line);background:var(--inset)}
