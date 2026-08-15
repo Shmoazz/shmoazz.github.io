@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.className="js"</script>
-<link rel="stylesheet" href="styles.css?v=10">
+<link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 
@@ -54,8 +54,7 @@
           Standard practice rewards an agent only for the goal itself. I wanted to know
           whether paying it for behavior that tends to lead to the goal would train it
           faster, so I built a hummingbird agent in Unity that had to collect nectar from
-          flowers, and gave one copy of it a reason to care about being in the right
-          neighborhood.
+          flowers, and gave one copy of it a reason to explore the right area.
         </p>
       </div>
     </div>
@@ -133,8 +132,8 @@
           The location based intrinsic reward converged faster than the extrinsic only
           baseline. The shaped agents explored more efficiently, spending more of the
           episode where reward was possible and less of it in dead space. The takeaway I
-          kept: reward shaping is not a detail you tune at the end, it decides what the
-          agent bothers to learn.
+          kept: reward shaping is worth deciding early, since it shapes what the agent
+          spends its time learning.
         </p>
       </div>
     </div>
@@ -151,7 +150,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=10"></script>
-<script src="aquarium.js?v=10"></script>
+<script src="site.js?v=11"></script>
+<script src="aquarium.js?v=11"></script>
 </body>
 </html>

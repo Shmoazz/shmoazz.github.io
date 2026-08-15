@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.className="js"</script>
-<link rel="stylesheet" href="styles.css?v=10">
+<link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 
@@ -52,52 +52,45 @@
           A senior capstone build of a research grade 3D printer accurate to
           <strong>&plusmn;1 micron</strong>. The motion platform runs preloaded ground ball
           screws, 1 micron linear scales, and high torque steppers under LinuxCNC. A
-          pneumatic extruder lays down a silver filled polymer, which is what makes the
-          machine interesting: it prints conductive traces directly onto the part.
+          pneumatic extruder lays down a silver filled polymer, so the machine can print
+          conductive traces directly onto the part.
         </p>
         <p>
-          My team's job was the XYZ stage. Make the motion rock solid, and the materials
-          group gets to spend their time on functional circuitry instead of chasing our
-          slop.
+          My team handled the XYZ stage, so the materials group could focus on the
+          printing itself.
         </p>
       </div>
     </div>
 
     <div class="proj-block reveal">
       <h2>My contributions</h2>
+      <div class="prose">
+        <p>
+          I designed and implemented the electrical and control hardware for the
+          machine: the Mesa 7i96 and 7i85 stack, the stepper drivers, the encoder
+          and linear scale inputs, the limit switches, and the pneumatic valve
+          control, along with the wiring diagrams and schematics the team built
+          from. Ferrite beads and a star ground layout went in to keep electrical
+          noise down, which matters at this level of repeatability.
+        </p>
+      </div>
 
-      <article class="card part">
-        <h3><span class="n">01</span> System level wiring diagram</h3>
-        <div class="media"><img src="images/3dp-wiring.jpg" alt="System wiring diagram" loading="lazy"></div>
-        <div class="prose">
-          <p>
-            The master wiring diagram covering motion control, limit switches, linear
-            scales, and pneumatic valves. The color coded harness map made assembly fast
-            and debugging survivable, and every reference cross links to its LinuxCNC HAL
-            pin, so the document answers questions instead of raising them.
-          </p>
-        </div>
-      </article>
+      <figure class="media">
+        <img src="images/3dp-wiring.jpg" alt="Block diagram of the control signal chain, from the Raspberry Pi through the Mesa cards to the stepper drivers and back from the linear encoders" loading="lazy">
+        <figcaption>
+          The control signal chain: a Pi 5 into the Mesa 7i96 for step and direction
+          out to the DM556T drivers, with the linear encoders coming back through
+          IBV 650 interpolators into the 7i85.
+        </figcaption>
+      </figure>
 
-      <article class="card part">
-        <h3><span class="n">02</span> Electrical schematic</h3>
-        <figure class="media">
-          <img src="images/3dp-schematic.jpg" alt="Schematic of the encoder output connections: three RELM linear scales through IBV 650 interpolators into the Mesa 7i85" loading="lazy">
-          <figcaption>
-            One sheet of the set: just the encoder output connections, three RELM
-            linear scales through their IBV 650 interpolators into the Mesa 7i85.
-          </figcaption>
-        </figure>
-        <div class="prose">
-          <p>
-            Detailed schematics for the Mesa 7i96 and 7i85 stack, the stepper drivers,
-            the scale inputs, and the solenoid control. Ferrite beads and a star ground
-            layout went in to tame electrical noise, which stops being a nicety once you
-            are chasing micron level repeatability: at that scale the noise floor is the
-            spec.
-          </p>
-        </div>
-      </article>
+      <figure class="media">
+        <img src="images/3dp-schematic.jpg" alt="Schematic of the encoder output connections: three RELM linear scales through IBV 650 interpolators into the Mesa 7i85" loading="lazy">
+        <figcaption>
+          One sheet of the set: just the encoder output connections, three RELM
+          linear scales through their IBV 650 interpolators into the Mesa 7i85.
+        </figcaption>
+      </figure>
     </div>
 
     <div class="proj-block reveal">
@@ -119,10 +112,9 @@
         <span class="kicker">What it did</span>
         <p>
           Test moves confirmed &plusmn;1 micron repeatability over 100 mm of travel, and the
-          printer successfully deposited conductive traces, which proved the motion system
-          and the extrusion timing together rather than one at a time. By close-out I could
-          generate working LinuxCNC configs from scratch, draft clean schematics, and
-          produce wiring diagrams somebody else could actually follow.
+          printer deposited conductive traces successfully. By close-out I could generate
+          working LinuxCNC configs from scratch, draft schematics, and produce wiring
+          diagrams the team could build from.
         </p>
       </div>
     </div>
@@ -139,7 +131,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=10"></script>
-<script src="aquarium.js?v=10"></script>
+<script src="site.js?v=11"></script>
+<script src="aquarium.js?v=11"></script>
 </body>
 </html>

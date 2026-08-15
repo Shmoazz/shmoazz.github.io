@@ -163,11 +163,11 @@ section{padding:84px 0}
 .section-head p{color:var(--ink-62);font-size:1rem;flex-basis:100%;margin-top:-6px}
 
 /* ---- hero -------------------------------------------------------------- */
-#hero{padding:64px 0 40px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+/* One column. No portrait: the name, one button, and the strip. */
+.hero-copy{max-width:46rem;padding:26px 0 6px}
 .hero-copy .kicker{display:block;margin-bottom:18px}
-/* No tagline under the name. The kicker says the job and the work says the
-   rest, so a sentence explaining both would only be in the way. */
+/* No tagline under the name either. The kicker says the job and the work
+   says the rest, so a sentence explaining both would only be in the way. */
 .hero-copy h1{margin-bottom:32px}
 .hero-copy h1 .sea{color:var(--sea)}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
@@ -180,6 +180,7 @@ section{padding:84px 0}
   font-family:var(--mono);font-size:.76rem;color:var(--ink-62);
   font-feature-settings:"tnum";
 }
+.status .sep{color:var(--ink-22)}
 .led{
   width:8px;height:8px;border-radius:50%;background:var(--sea-lit);flex:none;
   box-shadow:0 0 0 0 rgba(19,164,150,.5);animation:pulse 2.6s infinite;
@@ -188,53 +189,6 @@ section{padding:84px 0}
   0%{box-shadow:0 0 0 0 rgba(19,164,150,.45)}
   70%{box-shadow:0 0 0 7px rgba(19,164,150,0)}
   100%{box-shadow:0 0 0 0 rgba(19,164,150,0)}
-}
-.status .sep{color:var(--ink-22)}
-
-/* The photo hangs on the wall slightly crooked and straightens when you
-   look at it. Paper should behave like paper. */
-.hero-photo{position:relative;justify-self:center;max-width:460px;width:100%}
-.hero-photo .frame{
-  padding:12px 12px 0;background:var(--card);border:1px solid var(--line);
-  border-radius:var(--rad);transform:rotate(-1.6deg);
-  box-shadow:0 2px 4px rgba(21,19,16,.05),0 22px 48px rgba(21,19,16,.09);
-  transition:transform 420ms var(--ease);
-}
-.hero-photo:hover .frame{transform:rotate(0deg)}
-.hero-photo .shot{position:relative;line-height:0}
-.hero-photo img{border-radius:9px;aspect-ratio:5/4;object-fit:cover;object-position:center 42%}
-
-/* It is a group shot on a personal site, so the arrow is not decoration, it
-   answers the only question the picture raises. White with a shadow because
-   it has to survive both the bright ceiling and the dark cabinets. */
-.hero-photo .tag{
-  position:absolute;top:21%;right:2%;
-  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
-  pointer-events:none;line-height:1;
-}
-.hero-photo .tag b{
-  font-family:var(--serif);font-style:italic;font-weight:600;
-  font-variation-settings:"SOFT" 100,"WONK" 1;
-  font-size:clamp(17px,4.4vw,25px);letter-spacing:-.01em;color:#fff;
-  text-shadow:0 1px 7px rgba(0,0,0,.6),0 0 2px rgba(0,0,0,.45);
-}
-.hero-photo .tag svg{
-  width:clamp(64px,16vw,104px);height:auto;margin-right:2px;
-  filter:drop-shadow(0 1px 4px rgba(0,0,0,.5));
-}
-.hero-photo .tag path{
-  fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;
-}
-.hero-photo .caption{
-  font-family:var(--mono);font-size:.7rem;color:var(--ink-42);
-  padding:11px 2px 13px;text-align:center;
-}
-/* a strip of tape, because it costs four lines */
-.hero-photo .frame::before{
-  content:"";position:absolute;top:-11px;left:50%;
-  width:92px;height:24px;transform:translateX(-50%) rotate(-2.5deg);
-  background:rgba(19,164,150,.14);border:1px solid rgba(13,122,112,.16);
-  border-radius:2px;
 }
 
 /* ---- the aquarium ------------------------------------------------------ */
@@ -432,6 +386,7 @@ footer{padding:26px 0 40px}
   font-family:var(--mono);font-size:.72rem;line-height:1.55;color:var(--ink-42);
   padding:11px 16px 13px;border-top:1px solid var(--hairline);max-width:70ch;
 }
+.proj-block>.media+.media,.proj-block>.prose+.media{margin-top:18px}
 .media-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
 .video{position:relative;padding-bottom:56.25%;height:0;border-radius:var(--rad);overflow:hidden;
        border:1px solid var(--line);background:var(--inset)}
@@ -470,8 +425,6 @@ footer{padding:26px 0 40px}
 
 /* ---- narrow windows ---------------------------------------------------- */
 @media (max-width:1000px){
-  .hero-grid{grid-template-columns:1fr;gap:38px}
-  .hero-photo{max-width:330px;justify-self:start}
   .project-grid{grid-template-columns:repeat(2,1fr)}
   .awards{grid-template-columns:1fr}
 }
