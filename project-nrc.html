@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.className="js"</script>
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
 
@@ -54,14 +54,12 @@
       <div class="prose">
         <p>
           I led a team in the Manufacturing Workcell category at the National Robotics
-          Challenge. Our answer was a fully autonomous 3D print farm that handled the
-          whole printing process without a person in the room: two open source Voron printers,
-          a Cartesian gantry, and a plate swapping system that moved finished prints onto
+          Challenge. We built an autonomous 3D print farm: two Voron printers, a
+          Cartesian gantry, and a plate swapping system that moved finished prints to
           a shelf and started the next job.
         </p>
         <p>
-          It took the Gold Award and the Honda Innovation Award in our category at the
-          National Robotics Challenge 2025.
+          It took the Gold Award and the Honda Innovation Award in our category in 2025.
         </p>
       </div>
     </div>
@@ -77,11 +75,10 @@
         </div>
         <div class="prose">
           <p>
-            I built and maintained a live Onshape model of every subsystem, so the
-            mechanical, electrical, and software groups all referenced one source of
-            truth instead of three. Configurable aluminum extrusion and hardware
-            libraries kept the unique part count down and made BOM generation quicker, and
-            sub-assemblies kept the main workspace organized.
+            A live Onshape model of every subsystem, so the mechanical, electrical, and
+            software groups worked from one source of truth. Configurable extrusion and
+            hardware libraries kept the unique part count down and made BOM generation
+            quicker.
           </p>
         </div>
       </article>
@@ -94,12 +91,10 @@
         </div>
         <div class="prose">
           <p>
-            Designed, modeled, assembled, and tested a Cartesian gantry using a dual
-            leadscrew Z axis and a belt driven X axis, both stepper driven, with limit
-            switches on each end for leveling and homing. The X axis carries a custom
-            screw tensioner for the GT2 belt so motion stayed consistent across a long
-            competition day. Aluminum V groove extrusions and V wheels serve as the
-            linear guides.
+            A Cartesian gantry with a dual leadscrew Z axis and a belt driven X axis, both
+            stepper driven, with limit switches at each end for leveling and homing. The
+            X axis carries a custom screw tensioner for the GT2 belt. V groove extrusions
+            and V wheels serve as the linear guides.
           </p>
         </div>
       </article>
@@ -112,17 +107,15 @@
         </div>
         <div class="prose">
           <p>
-            A forklift style mechanism that pulls finished prints off the bed. I ran
-            oversized build plates so a strip of each plate hangs off the side of the
-            heater. The forklift inserts from both sides and, using embedded magnets
-            plus the gantry's Z motion, lifts the plate and whatever is printed on it
-            clear of the printer. The overhanging strip then rests on the plate holders
-            as the gantry drops it into the shelf.
+            A forklift style mechanism that pulls finished prints off the bed. Oversized
+            build plates hang a strip off the side of the heater; the forklift inserts
+            from both sides and, using embedded magnets and the gantry's Z motion, lifts
+            the plate clear. That same strip then rests on the plate holders as the
+            gantry drops it into the shelf.
           </p>
           <p>
-            The extension uses a two stage belt drive to maximize reach, on drawer
-            slides picked for their thin profile and resistance to bending. The magnets
-            removed the need for mechanical grippers, which simplified the mechanism.
+            The extension uses a two stage belt drive for reach, on drawer slides picked for
+            their thin profile and stiffness. The magnets removed the need for grippers.
           </p>
         </div>
       </article>
@@ -135,11 +128,10 @@
         </div>
         <div class="prose">
           <p>
-            Designed, modeled, assembled, and tested the shelving for the stacked printer
-            assembly, housing two Voron 2.4 printers and the plate holders, built from
-            aluminum extrusion for rigidity and easy assembly. The back left array of
-            plate holders holds a limit switch in every rung, so the control software can
-            check whether a plate was deposited or picked up instead of assuming it.
+            Aluminum extrusion shelving for the stacked printer assembly, housing two Voron
+            2.4 printers and the plate holders. The back left array holds a limit switch
+            in every rung, so the software can check whether a plate was deposited or
+            picked up instead of assuming it.
           </p>
         </div>
       </article>
@@ -149,10 +141,8 @@
         <div class="media"><img src="images/nrc-gantt.jpg" alt="GitHub Projects Gantt chart for the workcell schedule" loading="lazy"></div>
         <div class="prose">
           <p>
-            I built and maintained a GitHub Projects workspace with a live Gantt chart.
-            One view aligned deliverables across the hardware and software sub-teams,
-            documented tasks, and surfaced blockers early, which helped keep 15 people on
-            schedule.
+            A GitHub Projects workspace with a live Gantt chart, aligning deliverables
+            across the hardware and software sub-teams and surfacing blockers early.
           </p>
         </div>
       </article>
@@ -203,7 +193,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=11"></script>
-<script src="aquarium.js?v=11"></script>
+<script src="site.js?v=12"></script>
+<script src="aquarium.js?v=12"></script>
 </body>
 </html>

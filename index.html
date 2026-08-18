@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1;1,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.className="js"</script>
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
 
@@ -73,6 +73,8 @@
 </section>
 
 <!-- ========================= experience ========================= -->
+<!-- Titles only. Each entry's detail lives behind a native <details>, so it
+     works with no JS and stays keyboard accessible. -->
 <section id="experience">
   <div class="shell">
     <div class="section-head reveal">
@@ -87,12 +89,15 @@
         <div class="xp-body">
           <h3>Chief Technology Officer</h3>
           <div class="xp-role">Daily's</div>
-          <ul>
-            <li>Own robotics and engineering: a teleoperated bimanual arm cell built to work a real production kitchen rather than a demo table.</li>
-            <li>Built the motion layer under it, turntable, elevator, and arm, behind a real-time control service with the operator UI that drives it.</li>
-            <li>Built the kitchen production system: the day plan, the station queues the line runs off, and an inventory ledger that balances to the gram.</li>
-            <li>Set the engineering direction and the standards the codebase is held to.</li>
-          </ul>
+          <details class="xp-detail">
+            <summary><span class="on">Show more</span><span class="off">Show less</span></summary>
+            <ul>
+              <li>Own robotics and engineering: a teleoperated bimanual arm cell built to work a real production kitchen.</li>
+              <li>Built the motion layer under it, turntable, elevator, and arm, behind a real-time control service and its operator UI.</li>
+              <li>Built the kitchen production system: the day plan, the station queues, and an inventory ledger that balances to the gram.</li>
+              <li>Set the engineering direction and the standards the codebase is held to.</li>
+            </ul>
+          </details>
         </div>
       </article>
 
@@ -101,11 +106,14 @@
         <div class="xp-body">
           <h3>Engineering Intern</h3>
           <div class="xp-role">Innova Engineered Plastics, Inc.</div>
-          <ul>
-            <li>Created a CMM inspection SOP with embedded GD&amp;T checks to standardize quality evaluations.</li>
-            <li>Designed and rolled out a manufacturable process for an advanced aerospace component, balancing specification against production reality.</li>
-            <li>Researched and specified polymer materials and manufacturing processes for customer use cases, recommending options on performance, environment, and cost.</li>
-          </ul>
+          <details class="xp-detail">
+            <summary><span class="on">Show more</span><span class="off">Show less</span></summary>
+            <ul>
+              <li>Created a CMM inspection SOP with embedded GD&amp;T checks to standardize quality evaluations.</li>
+              <li>Designed a manufacturable process for an advanced aerospace component.</li>
+              <li>Researched and specified polymer materials and processes for customer use cases.</li>
+            </ul>
+          </details>
         </div>
       </article>
 
@@ -114,12 +122,15 @@
         <div class="xp-body">
           <h3>Robotics Engineering Intern</h3>
           <div class="xp-role">Applied Research Associates, Inc.</div>
-          <ul>
-            <li>Prototyped and validated UAV electro-mechanical mechanisms using CAD and rapid fabrication.</li>
-            <li>Integrated sensors, microcontrollers, and RF transmission modules into cohesive subsystems.</li>
-            <li>Modeled system behavior in MATLAB and applied FEA to guide design choices.</li>
-            <li>Designed and fabricated electronics enclosures for UAV deployment.</li>
-          </ul>
+          <details class="xp-detail">
+            <summary><span class="on">Show more</span><span class="off">Show less</span></summary>
+            <ul>
+              <li>Prototyped and validated UAV electro-mechanical mechanisms.</li>
+              <li>Integrated sensors, microcontrollers, and RF modules into working subsystems.</li>
+              <li>Modeled system behavior in MATLAB and used FEA to guide design choices.</li>
+              <li>Designed and fabricated electronics enclosures for UAV deployment.</li>
+            </ul>
+          </details>
         </div>
       </article>
 
@@ -128,13 +139,16 @@
         <div class="xp-body">
           <h3>Chief Engineer</h3>
           <div class="xp-role">Competitive Robotics Organization at Virginia Tech</div>
-          <ul>
-            <li>Led the team to first place and the Honda Innovation Award in the National Robotics Challenge, Manufacturing Workcell category.</li>
-            <li>Designed and iterated a 1.5 x 1 m vertical Cartesian gantry for automated print handling.</li>
-            <li>Engineered a pick-and-place mechanism for print plate manipulation.</li>
-            <li>Developed shelving and storage with integrated sensors for plate indexing, which is what made the workflow autonomous.</li>
-            <li>Created and managed the engineering design plan and delegated tasks across a 15 person team.</li>
-          </ul>
+          <details class="xp-detail">
+            <summary><span class="on">Show more</span><span class="off">Show less</span></summary>
+            <ul>
+              <li>Led the team to first place and the Honda Innovation Award at the National Robotics Challenge.</li>
+              <li>Designed a 1.5 x 1 m vertical Cartesian gantry for automated print handling.</li>
+              <li>Engineered a pick-and-place mechanism for print plate manipulation.</li>
+              <li>Developed sensored shelving for plate indexing, which is what made the workflow autonomous.</li>
+              <li>Ran the design plan and task delegation across a 15 person team.</li>
+            </ul>
+          </details>
         </div>
       </article>
 
@@ -143,12 +157,15 @@
         <div class="xp-body">
           <h3>Mechanical Engineering Intern</h3>
           <div class="xp-role">Applied Research Associates, Inc.</div>
-          <ul>
-            <li>Supported full lifecycle prototyping for defense applications.</li>
-            <li>Modeled and fabricated components for hydraulic and electrically actuated systems.</li>
-            <li>Used FEA to verify designs under expected load conditions.</li>
-            <li>Designed assemblies to satisfy manufacturing and sourcing constraints.</li>
-          </ul>
+          <details class="xp-detail">
+            <summary><span class="on">Show more</span><span class="off">Show less</span></summary>
+            <ul>
+              <li>Supported full lifecycle prototyping for defense applications.</li>
+              <li>Modeled and fabricated components for hydraulic and electrically actuated systems.</li>
+              <li>Used FEA to verify designs under expected load conditions.</li>
+              <li>Designed assemblies around manufacturing and sourcing constraints.</li>
+            </ul>
+          </details>
         </div>
       </article>
 
@@ -157,11 +174,14 @@
         <div class="xp-body">
           <h3>Mechanical Lead</h3>
           <div class="xp-role">Competitive Robotics Organization at Virginia Tech</div>
-          <ul>
-            <li>Designed, built, and tested object handling and locomotion mechanisms.</li>
-            <li>Integrated mechanical subsystems and led the test setups that validated them.</li>
-            <li>Contributed to the highest scoring run out of 35 schools at IEEE SoutheastCon.</li>
-          </ul>
+          <details class="xp-detail">
+            <summary><span class="on">Show more</span><span class="off">Show less</span></summary>
+            <ul>
+              <li>Designed, built, and tested object handling and locomotion mechanisms.</li>
+              <li>Integrated mechanical subsystems and led the test setups that validated them.</li>
+              <li>Contributed to the highest scoring run out of 35 schools at IEEE SoutheastCon.</li>
+            </ul>
+          </details>
         </div>
       </article>
     </div>
@@ -183,7 +203,7 @@
         <div class="project-body">
           <span class="kicker">2024 &ndash; 2025</span>
           <h3>National Robotics Challenge</h3>
-          <p>An automated 3D printing workcell. Two Voron printers, a web based print queue, and a gantry that swaps its own plates with nobody in the room.</p>
+          <p>An automated 3D print farm. Two Voron printers and a gantry that swaps its own plates.</p>
           <span class="tag-win">Gold + Honda Innovation</span>
           <span class="project-go">View project <span class="arrow">&rarr;</span></span>
         </div>
@@ -194,7 +214,7 @@
         <div class="project-body">
           <span class="kicker">2023 &ndash; 2024</span>
           <h3>IEEE SoutheastCon</h3>
-          <p>An autonomous robot inside a 12 inch cube that had to move three kinds of game piece and lay its own bridge. Highest single round score of 35 universities.</p>
+          <p>An autonomous competition robot inside a 12 inch cube, bridge and all.</p>
           <span class="tag-win">1st, Hardware Design</span>
           <span class="project-go">View project <span class="arrow">&rarr;</span></span>
         </div>
@@ -205,7 +225,7 @@
         <div class="project-body">
           <span class="kicker">2024 &ndash; 2025</span>
           <h3>Micron Precision Printer</h3>
-          <p>Senior capstone: a research grade 3D printer on Mesa hardware and LinuxCNC, with ground ball screws and 1 micron linear scales, printing conductive traces.</p>
+          <p>Senior capstone. A research grade printer on Mesa and LinuxCNC, targeting one micron.</p>
           <span class="project-go">View project <span class="arrow">&rarr;</span></span>
         </div>
       </a>
@@ -215,7 +235,7 @@
         <div class="project-body">
           <span class="kicker">2024</span>
           <h3>RoboLeague</h3>
-          <p>Rocket League, but the cars are real. A custom ESP32 RC car and an iOS app for control and scorekeeping, modeled, printed, and assembled inside 30 hours.</p>
+          <p>Rocket League with real cars. A custom ESP32 RC car and an iOS app, built in 30 hours.</p>
           <span class="project-go">View project <span class="arrow">&rarr;</span></span>
         </div>
       </a>
@@ -225,7 +245,7 @@
         <div class="project-body">
           <span class="kicker">Ongoing</span>
           <h3>5 DOF Robotic Arm</h3>
-          <p>A fully 3D printed arm built as my own test bench for kinematics, control, and motion planning. Currently a CAD model and a lot of opinions about assembly.</p>
+          <p>A 3D printed arm as a test bench for kinematics and motion planning. Still in CAD.</p>
           <span class="project-go">View project <span class="arrow">&rarr;</span></span>
         </div>
       </a>
@@ -235,7 +255,7 @@
         <div class="project-body">
           <span class="kicker">2021</span>
           <h3>Reinforcement Learning</h3>
-          <p>Testing whether reward shaping earns its keep. I gave a hummingbird agent a location based intrinsic reward and watched it converge faster than the baseline.</p>
+          <p>Does a location based intrinsic reward speed up convergence? It did.</p>
           <span class="project-go">View project <span class="arrow">&rarr;</span></span>
         </div>
       </a>
@@ -284,7 +304,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=11"></script>
-<script src="aquarium.js?v=11"></script>
+<script src="site.js?v=12"></script>
+<script src="aquarium.js?v=12"></script>
 </body>
 </html>

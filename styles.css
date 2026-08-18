@@ -262,17 +262,17 @@ section{padding:84px 0}
   width:1px;background:var(--line);transform:translateX(-50%);
 }
 .xp{display:grid;grid-template-columns:var(--spine) 1fr;gap:0;position:relative}
-.xp+.xp{margin-top:6px}
+.xp+.xp{margin-top:0}
 /* padding-top is tuned so the date's optical center matches the job title's,
    and the bead sits on that same line */
 .xp-when{
-  position:relative;padding:29px 26px 26px 0;
+  position:relative;padding:25px 26px 20px 0;
   font-family:var(--mono);font-size:.78rem;color:var(--ink-42);
   text-align:right;white-space:nowrap;font-feature-settings:"tnum";
 }
 /* the bead hangs off the row, on the same anchor as the line above */
 .xp::after{
-  content:"";position:absolute;left:var(--spine);top:34px;
+  content:"";position:absolute;left:var(--spine);top:31px;
   width:var(--bead);height:var(--bead);border-radius:50%;
   transform:translateX(-50%);
   background:var(--paper);border:2px solid var(--ink-22);
@@ -280,12 +280,33 @@ section{padding:84px 0}
 }
 .xp.now::after{border-color:var(--sea);background:var(--sea)}
 .xp.now .xp-when{color:var(--sea-deep)}
-.xp-body{padding:26px 0 30px 30px}
+.xp-body{padding:22px 0 20px 30px}
 .xp-body h3{margin-bottom:3px}
 .xp-role{
   font-family:var(--sans);font-size:.96rem;font-weight:600;color:var(--sea-deep);
   margin-bottom:12px;
 }
+/* Detail is collapsed by default: the timeline reads as a list of titles.
+   Native <details>, so it needs no JS and stays keyboard operable. */
+.xp-detail{margin-top:10px}
+.xp-detail summary{
+  display:inline-flex;align-items:center;gap:6px;cursor:pointer;list-style:none;
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-42);padding:3px 0;
+  transition:color var(--dur) var(--ease);
+}
+.xp-detail summary::-webkit-details-marker{display:none}
+.xp-detail summary::after{
+  content:"";width:5px;height:5px;border-right:1.4px solid currentColor;
+  border-bottom:1.4px solid currentColor;transform:rotate(45deg) translate(-1px,-1px);
+  transition:transform var(--dur) var(--ease);
+}
+.xp-detail[open] summary::after{transform:rotate(-135deg) translate(-2px,-2px)}
+.xp-detail summary:hover{color:var(--sea)}
+.xp-detail .off{display:none}
+.xp-detail[open] .on{display:none}
+.xp-detail[open] .off{display:inline}
+.xp-detail ul{margin-top:12px}
 .xp-body ul{list-style:none;display:flex;flex-direction:column;gap:8px}
 .xp-body li{position:relative;padding-left:20px;color:var(--ink-80);font-size:1rem}
 .xp-body li::before{

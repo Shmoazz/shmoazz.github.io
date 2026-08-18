@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.className="js"</script>
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
 
@@ -51,10 +51,10 @@
       <h2>The question</h2>
       <div class="prose">
         <p>
-          Standard practice rewards an agent only for the goal itself. I wanted to know
-          whether paying it for behavior that tends to lead to the goal would train it
-          faster, so I built a hummingbird agent in Unity that had to collect nectar from
-          flowers, and gave one copy of it a reason to explore the right area.
+          Standard practice rewards an agent only for the goal itself. Would paying it for
+          behavior that tends to lead there train it faster? I built a hummingbird agent
+          in Unity that collects nectar from flowers, and gave one copy a reason to
+          explore the right area.
         </p>
       </div>
     </div>
@@ -67,11 +67,9 @@
         <div class="media"><img src="images/rl-unity-environment.jpg" alt="Unity environment with hummingbird and flowers" loading="lazy"></div>
         <div class="prose">
           <p>
-            A Unity environment where the hummingbird navigates to collect nectar. The
-            agent observes its own position and orientation in 3D plus a vector from the
-            tip of its beak to the nearest flower's nectar hitbox. The baseline is purely
-            extrinsic: reward arrives only when the beak lands inside the hitbox, and
-            never before.
+            The agent observes its position and orientation in 3D plus a vector from the tip
+            of its beak to the nearest flower's nectar hitbox. The baseline is purely
+            extrinsic: reward arrives only when the beak lands inside the hitbox.
           </p>
         </div>
       </article>
@@ -84,16 +82,15 @@
         </div>
         <div class="prose">
           <p>
-            I added triangular prism triggers arranged in a circular pizza slice pattern
-            at the same Z level as the flowers. Entering one pays out a small reward and
-            disables that trigger for the rest of the episode, so the agent is paid for
-            covering new ground rather than for hovering in a spot it already found.
+            Triangular prism triggers in a circular pizza slice pattern at the same Z level
+            as the flowers. Entering one pays a small reward and disables that trigger for
+            the episode, so the agent is paid for covering new ground rather than hovering
+            where it already was.
           </p>
           <p>
-            The idea being tested is narrow on purpose: reward the agent for exploring
-            the altitude where flowers live, before it has ever touched one. If that
-            shapes behavior, it should show up as faster convergence, not just a
-            different looking policy.
+            The idea is narrow on purpose: reward exploring the altitude where flowers live,
+            before the agent has touched one. If it works, it should show up as faster
+            convergence.
           </p>
         </div>
       </article>
@@ -103,10 +100,9 @@
         <div class="media"><img src="images/rl-tensorboard.jpg" alt="TensorBoard comparison of both approaches" loading="lazy"></div>
         <div class="prose">
           <p>
-            Both models trained through Unity ML-Agents against a Python backend in an
-            Anaconda environment, with a config file pinning the network architecture and
-            hyperparameters so the only difference between the runs was the reward. I used
-            TensorBoard to compare them over time.
+            Both models trained through Unity ML-Agents against a Python backend, with a
+            config file pinning the architecture and hyperparameters so the only
+            difference between runs was the reward. Compared in TensorBoard.
           </p>
         </div>
       </article>
@@ -130,10 +126,8 @@
         <span class="kicker">What came out of it</span>
         <p>
           The location based intrinsic reward converged faster than the extrinsic only
-          baseline. The shaped agents explored more efficiently, spending more of the
-          episode where reward was possible and less of it in dead space. The takeaway I
-          kept: reward shaping is worth deciding early, since it shapes what the agent
-          spends its time learning.
+          baseline, spending more of the episode where reward was possible. Reward shaping
+          is worth deciding early, since it shapes what the agent spends its time on.
         </p>
       </div>
     </div>
@@ -150,7 +144,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=11"></script>
-<script src="aquarium.js?v=11"></script>
+<script src="site.js?v=12"></script>
+<script src="aquarium.js?v=12"></script>
 </body>
 </html>
